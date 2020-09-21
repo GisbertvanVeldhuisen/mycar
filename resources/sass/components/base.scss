@@ -1,0 +1,14 @@
+html #root {
+  margin: 0;
+  font-family: $font-family;
+
+  .container {
+    padding: 80px 10%;
+  }
+  .column {
+    &.one-half {
+      min-width: calc(100% / 2 - 10px);
+      max-width: calc(100% / 2 - 10px);
+    }
+  }
+}

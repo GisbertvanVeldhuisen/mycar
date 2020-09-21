@@ -1,0 +1,35 @@
+html #root {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+html #root .container {
+  padding: 80px 10%;
+}
+
+html #root .column.one-half {
+  min-width: calc(100% / 2 - 10px);
+  max-width: calc(100% / 2 - 10px);
+}
+
+html #root #header .container {
+  padding: 25px 10%;
+}
+
+html #root #header .menu-container {
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 100%;
+}
+
+html #root #header .main-menu-container {
+  margin: auto 0 auto auto;
+}
+
+html #root #header .menu-item {
+  font-size: 18px;
+  font-weight: 500;
+  color: black;
+  text-decoration: none;
+}
+

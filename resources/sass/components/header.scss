@@ -1,0 +1,25 @@
+html #root {
+  #header {
+
+    .container {
+      padding: 25px 10%;
+    }
+    .menu-container{
+      display: flex;
+      flex-wrap: wrap;
+      min-width: 100%;
+    }
+    .main-menu-container{
+      margin: auto 0 auto auto;
+    }
+    .menu-item{
+      font-size: 18px;
+      font-weight: 500;
+      color: black;
+      text-decoration: none;
+      &.button{
+        background: $secondary;
+      }
+    }
+  }
+}

@@ -5,10 +5,23 @@ html #root {
   .container {
     padding: 80px 10%;
   }
+  //grid
   .column {
     &.one-half {
       min-width: calc(100% / 2 - 10px);
       max-width: calc(100% / 2 - 10px);
+    }
+    &.one-third{
+      min-width: calc(100% /3 - 10px);
+      max-width: calc(100% /3 - 10px);
+    }
+  }
+  //button styling
+
+  .button-wrap{
+    .button-title{
+      text-decoration: none;
+      color: black;
     }
   }
 }

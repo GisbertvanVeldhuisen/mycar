@@ -107,7 +107,9 @@
                         <div class="owner">eigenaar</div>
                         <div class="brand">brand</div>
                         <div class="button-wrap">
-                            <span class="button-title">like</span>
+                            <a class="button" href="#">
+                                <span class="button-title">like</span>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -126,10 +128,14 @@
                         <div class="owner">eigenaar</div>
                         <div class="brand">brand</div>
                         <div class="button-wrap">
-                            <span class="button-title">amount likes</span>
+                            <a class="button" href="#">
+                                <span class="button-title">amount likes</span>
+                            </a>
                         </div>
                         <div class="button-wrap">
-                            <span class="button-title">delete</span>
+                            <a class="button" href="#">
+                                <span class="button-title">delete</span>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -182,7 +188,85 @@
                 </div>
             </div>
         </div>
+        <div class="section users" style="">
+            <div class="container">
+                <div class="heading">
+                    <h3>users</h3>
+                </div>
+                <div class="column full">
+                    <div class="user">
+                        <p class="username">{username}</p>
+                        <div class="button-wrap">
+                            <a class="button" href="#">
+                                <span class="button-title">ban</span>
+                            </a>
+                        </div>
+                        <div class="button-wrap">
+                            <a class="button" href="#">
+                                <span class="button-title">delete</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="user">
+                        <p class="username">{username}</p>
+                        <div class="button-wrap">
+                            <a class="button" href="#">
+                                <span class="button-title">ban</span>
+                            </a>
+                        </div>
+                        <div class="button-wrap">
+                            <a class="button" href="#">
+                                <span class="button-title">delete</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="user">
+                        <p class="username">{username}</p>
+                        <div class="button-wrap">
+                            <a class="button" href="#">
+                                <span class="button-title">ban</span>
+                            </a>
+                        </div>
+                        <div class="button-wrap">
+                            <a class="button" href="#">
+                                <span class="button-title">delete</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section admin-navigation" style="">
+            <div class="container">
+                <div class="heading">
+                    <h3>admin navigation</h3>
+                </div>
+                <div class="button-wrap">
+                    <a class="button" href="#">
+                        <span class="button-title">Homepage edit</span>
+                    </a>
+                </div>
+                <div class="button-wrap">
+                    <a class="button" href="#">
+                        <span class="button-title">Admin panel</span>
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
+</div>
+<div class="footer">
+    <div class="logo-container">
+        <img src="https://picsum.photos/200/100">
+    </div>
+    <div class="main-menu-container">
+        <a class="menu-item" href="#">linkie</a>
+        <a class="menu-item" href="#">linkie</a>
+        <a class="menu-item button" href="#">sign in</a>
+    </div>
+</div>
+<div class="socket">
+    <p>Copyright © 2020 Mycar Netherlands, All rights reserved. Website built by Gisbert van Veldhuisen</p>
 </div>
 </body>
 </html>

@@ -5,6 +5,9 @@ html #root {
 
 html #root .container {
   padding: 80px 10%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 html #root .column.one-half {
@@ -12,14 +15,68 @@ html #root .column.one-half {
   max-width: calc(100% / 2 - 10px);
 }
 
+html #root .column.one-third {
+  min-width: calc(100% / 3 - 10px);
+  max-width: calc(100% / 3 - 10px);
+}
+
+html #root .column.image.right {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+html #root .image-container {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+html #root .button-wrap .button {
+  text-decoration: none;
+}
+
+html #root .button-wrap .button.background-secondary {
+  background-color: #0072ce;
+}
+
+html #root .button-wrap .button.background-tertairy {
+  background-color: #003791;
+}
+
+html #root .button-wrap .button.borderd {
+  border: 1px solid #363636;
+}
+
+html #root .button-wrap .button .button-title {
+  text-decoration: none;
+  color: black;
+}
+
+html #root .heading {
+  min-width: 100%;
+}
+
+html #root .grid-container {
+  min-width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 html #root #header .container {
-  padding: 25px 10%;
+  padding: 0 10%;
 }
 
 html #root #header .menu-container {
   display: flex;
   flex-wrap: wrap;
   min-width: 100%;
+}
+
+html #root #header .logo-container {
+  margin: 20px 0;
 }
 
 html #root #header .main-menu-container {
@@ -31,5 +88,71 @@ html #root #header .menu-item {
   font-weight: 500;
   color: black;
   text-decoration: none;
+}
+
+html #root #header .menu-item.button {
+  background: #0072ce;
+}
+
+html #root .car-overview .one-third,
+html #root .posts .one-third {
+  overflow: hidden;
+  position: relative;
+}
+
+html #root .car-overview .one-third:hover .owner,
+html #root .car-overview .one-third:hover .brand,
+html #root .posts .one-third:hover .owner,
+html #root .posts .one-third:hover .brand {
+  opacity: 1;
+}
+
+html #root .car-overview .one-third .owner,
+html #root .posts .one-third .owner {
+  position: absolute;
+  font-size: 20px;
+  font-weight: 600;
+  bottom: 60px;
+  left: 40px;
+  color: white;
+  opacity: 0;
+  transition: 0.4s ease;
+}
+
+html #root .car-overview .one-third .brand,
+html #root .posts .one-third .brand {
+  position: absolute;
+  right: 40px;
+  bottom: 60px;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  opacity: 0;
+  transition: 0.4s ease;
+}
+
+html #root .car-overview .one-third .image-container img,
+html #root .posts .one-third .image-container img {
+  width: 100%;
+}
+
+html #root .car-overview .one-third .button-wrap,
+html #root .posts .one-third .button-wrap {
+  min-width: 100%;
+}
+
+html #root .car-overview .one-third .button-wrap .button,
+html #root .posts .one-third .button-wrap .button {
+  min-width: 100%;
+  padding: 10px;
+  display: block;
+  text-align: center;
+}
+
+html #root .car-overview .one-third .button-wrap .button-title,
+html #root .posts .one-third .button-wrap .button-title {
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
 }
 

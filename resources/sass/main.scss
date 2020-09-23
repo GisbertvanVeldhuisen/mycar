@@ -1,3 +1,6 @@
+//layout
+@import "layouts/variables";
+
 //components
 @import "components/base";
 @import "components/header";
@@ -5,6 +8,4 @@
 
 //section
 @import "sections/header";
-
-//layout
-@import "layouts/variables";
+@import "sections/car";

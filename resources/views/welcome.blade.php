@@ -15,7 +15,7 @@
             <div class="menu-container">
                 <div class="menu-container">
                     <div class="logo-container">
-                        <img src="https://picsum.photos/200/100">
+                        <img src="https://picsum.photos/200/75">
                     </div>
                     <div class="main-menu-container">
                         <a class="menu-item" href="#">linkie</a>
@@ -80,16 +80,15 @@
         </div>
         <div class="section tekstblock" style="">
             <div class="container">
-                <div class="column one-half">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias aliquam animi consequuntur
-                        deleniti eum facere hic, incidunt magnam minus numquam perspiciatis quidem voluptate. Id laborum
-                        minus nulla quasi totam!</p>
-                </div>
-
                 <div class="column one-half image left">
                     <div class="image">
                         <img src="https://picsum.photos/400/400" alt="">
                     </div>
+                </div>
+                <div class="column one-half">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias aliquam animi consequuntur
+                        deleniti eum facere hic, incidunt magnam minus numquam perspiciatis quidem voluptate. Id laborum
+                        minus nulla quasi totam!</p>
                 </div>
             </div>
         </div>
@@ -101,15 +100,39 @@
                 </div>
                 <div class="grid-container">
                     <div class="column one-third">
-                        <div class="imgage-container">
+                        <div class="image-container">
                             <img src="https://picsum.photos/400/400" alt="">
+                            <div class="owner">eigenaar</div>
+                            <div class="brand">brand</div>
+                            <div class="button-wrap">
+                                <a class="button background-tertairy" href="#">
+                                    <span class="button-title">like</span>
+                                </a>
+                            </div>
                         </div>
-                        <div class="owner">eigenaar</div>
-                        <div class="brand">brand</div>
-                        <div class="button-wrap">
-                            <a class="button" href="#">
-                                <span class="button-title">like</span>
-                            </a>
+                    </div>
+                    <div class="column one-third">
+                        <div class="image-container">
+                            <img src="https://picsum.photos/400/400" alt="">
+                            <div class="owner">eigenaar</div>
+                            <div class="brand">brand</div>
+                            <div class="button-wrap">
+                                <a class="button background-tertairy" href="#">
+                                    <span class="button-title">like</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column one-third">
+                        <div class="image-container">
+                            <img src="https://picsum.photos/400/400" alt="">
+                            <div class="owner">eigenaar</div>
+                            <div class="brand">brand</div>
+                            <div class="button-wrap">
+                                <a class="button background-tertairy" href="#">
+                                    <span class="button-title">like</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -122,20 +145,22 @@
                 </div>
                 <div class="grid-container">
                     <div class="column one-third">
-                        <div class="imgage-container">
+                        <div class="image-container">
                             <img src="https://picsum.photos/400/400" alt="">
-                        </div>
-                        <div class="owner">eigenaar</div>
-                        <div class="brand">brand</div>
-                        <div class="button-wrap">
-                            <a class="button" href="#">
-                                <span class="button-title">amount likes</span>
-                            </a>
-                        </div>
-                        <div class="button-wrap">
-                            <a class="button" href="#">
-                                <span class="button-title">delete</span>
-                            </a>
+                            <div class="owner">eigenaar</div>
+                            <div class="brand">brand</div>
+                            <div class="button-row">
+                                <div class="button-wrap">
+                                    <a class="button background-tertairy" href="#">
+                                        <span class="button-title">amount of like</span>
+                                    </a>
+                                </div>
+                                <div class="button-wrap">
+                                    <a class="button background-tertairy" href="#">
+                                        <span class="button-title">delete</span>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -4,6 +4,9 @@ html #root {
 
   .container {
     padding: 80px 10%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
   //grid
   .column {
@@ -11,17 +14,57 @@ html #root {
       min-width: calc(100% / 2 - 10px);
       max-width: calc(100% / 2 - 10px);
     }
-    &.one-third{
-      min-width: calc(100% /3 - 10px);
-      max-width: calc(100% /3 - 10px);
+    &.one-third {
+      min-width: calc(100% / 3 - 10px);
+      max-width: calc(100% / 3 - 10px);
     }
   }
+
+  //images
+  .column.image {
+    &.right {
+      display: flex;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+    }
+  }
+  .image-container {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  }
+
   //button styling
 
-  .button-wrap{
-    .button-title{
+  .button-wrap {
+    .button {
       text-decoration: none;
-      color: black;
+
+      &.background-secondary{
+        background-color: $secondary;
+      }
+      &.background-tertairy{
+        background-color: $tertairy;
+      }
+      &.borderd{
+        border: 1px solid $text;
+      }
+      .button-title {
+        text-decoration: none;
+        color: black;
+      }
     }
+  }
+
+  //genaral
+  .heading {
+    min-width: 100%;
+  }
+  .grid-container{
+    min-width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 }

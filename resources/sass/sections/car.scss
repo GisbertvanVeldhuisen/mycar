@@ -1,0 +1,53 @@
+html #root {
+  .car-overview,
+  .posts{
+    .one-third {
+      overflow: hidden;
+      position: relative;
+      &:hover{
+        .owner,
+        .brand{
+          opacity: 1;
+        }
+      }
+      .owner{
+        position: absolute;
+        font-size: 20px;
+        font-weight: 600;
+        bottom: 60px;
+        left: 40px;
+        color: white;
+        opacity: 0;
+        transition: 0.4s ease;
+      }
+      .brand{
+        position: absolute;
+        right: 40px;
+        bottom: 60px;
+        color: white;
+        font-size: 20px;
+        font-weight: 600;
+        opacity: 0;
+        transition: 0.4s ease;
+      }
+      .image-container img{
+        width: 100%;
+      }
+
+      .button-wrap {
+        min-width: 100%;
+        .button {
+          min-width: 100%;
+          padding: 10px;
+          display: block;
+          text-align: center;
+        }
+        .button-title{
+          color: white;
+          font-size: 16px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}

@@ -1,28 +1,20 @@
 html #root {
   #header {
-
+    background-color: $tertairy;
     .container {
       padding: 0 10%;
     }
-    .menu-container{
+    .menu-container {
       display: flex;
       flex-wrap: wrap;
       min-width: 100%;
     }
-    .logo-container{
+    .logo-container {
       margin: 20px 0;
     }
-    .main-menu-container{
+    .main-menu-container {
       margin: auto 0 auto auto;
     }
-    .menu-item{
-      font-size: 18px;
-      font-weight: 500;
-      color: black;
-      text-decoration: none;
-      &.button{
-        background: $secondary;
-      }
-    }
+
   }
 }

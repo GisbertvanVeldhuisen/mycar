@@ -20,7 +20,7 @@
                     <div class="main-menu-container">
                         <a class="menu-item" href="#">linkie</a>
                         <a class="menu-item" href="#">linkie</a>
-                        <a class="menu-item button" href="#">sign in</a>
+                        <a class="menu-item button background-gray" href="#">sign in</a>
                     </div>
                     <div class="responsive-menu">
 
@@ -156,7 +156,45 @@
                                     </a>
                                 </div>
                                 <div class="button-wrap">
+                                    <a class="button background-red" href="#">
+                                        <span class="button-title">delete</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column one-third">
+                        <div class="image-container">
+                            <img src="https://picsum.photos/400/400" alt="">
+                            <div class="owner">eigenaar</div>
+                            <div class="brand">brand</div>
+                            <div class="button-row">
+                                <div class="button-wrap">
                                     <a class="button background-tertairy" href="#">
+                                        <span class="button-title">amount of like</span>
+                                    </a>
+                                </div>
+                                <div class="button-wrap">
+                                    <a class="button background-red" href="#">
+                                        <span class="button-title">delete</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column one-third">
+                        <div class="image-container">
+                            <img src="https://picsum.photos/400/400" alt="">
+                            <div class="owner">eigenaar</div>
+                            <div class="brand">brand</div>
+                            <div class="button-row">
+                                <div class="button-wrap">
+                                    <a class="button background-tertairy" href="#">
+                                        <span class="button-title">amount of like</span>
+                                    </a>
+                                </div>
+                                <div class="button-wrap">
+                                    <a class="button background-red" href="#">
                                         <span class="button-title">delete</span>
                                     </a>
                                 </div>
@@ -221,41 +259,51 @@
                 <div class="column full">
                     <div class="user">
                         <p class="username">{username}</p>
-                        <div class="button-wrap">
-                            <a class="button" href="#">
-                                <span class="button-title">ban</span>
-                            </a>
-                        </div>
-                        <div class="button-wrap">
-                            <a class="button" href="#">
-                                <span class="button-title">delete</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="user">
-                        <p class="username">{username}</p>
-                        <div class="button-wrap">
-                            <a class="button" href="#">
-                                <span class="button-title">ban</span>
-                            </a>
-                        </div>
-                        <div class="button-wrap">
-                            <a class="button" href="#">
-                                <span class="button-title">delete</span>
-                            </a>
+                        <div class="button-row">
+                            <div class="button-wrap">
+                                <a class="button ghost" href="#">
+                                    <span class="button-title">ban</span>
+                                </a>
+                            </div>
+                            <div class="button-wrap">
+                                <a class="button background-red" href="#">
+                                    <span class="button-title">delete</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
+                </div>
+                <div class="column full">
                     <div class="user">
                         <p class="username">{username}</p>
-                        <div class="button-wrap">
-                            <a class="button" href="#">
-                                <span class="button-title">ban</span>
-                            </a>
+                        <div class="button-row">
+                            <div class="button-wrap">
+                                <a class="button ghost" href="#">
+                                    <span class="button-title">ban</span>
+                                </a>
+                            </div>
+                            <div class="button-wrap">
+                                <a class="button background-red" href="#">
+                                    <span class="button-title">delete</span>
+                                </a>
+                            </div>
                         </div>
-                        <div class="button-wrap">
-                            <a class="button" href="#">
-                                <span class="button-title">delete</span>
-                            </a>
+                    </div>
+                </div>
+                <div class="column full">
+                    <div class="user">
+                        <p class="username">{username}</p>
+                        <div class="button-row">
+                            <div class="button-wrap">
+                                <a class="button ghost" href="#">
+                                    <span class="button-title">ban</span>
+                                </a>
+                            </div>
+                            <div class="button-wrap">
+                                <a class="button background-red" href="#">
+                                    <span class="button-title">delete</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -267,12 +315,12 @@
                     <h3>admin navigation</h3>
                 </div>
                 <div class="button-wrap">
-                    <a class="button" href="#">
+                    <a class="button background-secondary" href="#">
                         <span class="button-title">Homepage edit</span>
                     </a>
                 </div>
                 <div class="button-wrap">
-                    <a class="button" href="#">
+                    <a class="button background-secondary" href="#">
                         <span class="button-title">Admin panel</span>
                     </a>
                 </div>
@@ -281,17 +329,21 @@
     </div>
 </div>
 <div class="footer">
-    <div class="logo-container">
-        <img src="https://picsum.photos/200/100">
-    </div>
-    <div class="main-menu-container">
-        <a class="menu-item" href="#">linkie</a>
-        <a class="menu-item" href="#">linkie</a>
-        <a class="menu-item button" href="#">sign in</a>
+    <div class="container">
+        <div class="main-menu-container">
+            <a class="menu-item" href="#">linkie</a>
+            <a class="menu-item" href="#">linkie</a>
+            <a class="menu-item button" href="#">sign in</a>
+        </div>
+        <div class="logo-container">
+            <img src="https://picsum.photos/200/100">
+        </div>
     </div>
 </div>
 <div class="socket">
-    <p>Copyright © 2020 Mycar Netherlands, All rights reserved. Website built by Gisbert van Veldhuisen</p>
+    <div class="container">
+        <p>Copyright © 2020 Mycar Netherlands, All rights reserved. Website built by MyCar</p>
+    </div>
 </div>
 </body>
 </html>

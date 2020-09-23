@@ -10,6 +10,10 @@ html #root {
   }
   //grid
   .column {
+    &.full {
+      min-width: 100%;
+      max-width: 100%;
+    }
     &.one-half {
       min-width: calc(100% / 2 - 10px);
       max-width: calc(100% / 2 - 10px);
@@ -39,14 +43,44 @@ html #root {
   .button-wrap {
     .button {
       text-decoration: none;
+      padding: 10px 15px;
+      .button-title{
+        font-weight: 600;
+        font-size: 16px;
+      }
 
-      &.background-secondary{
+      &.background-secondary {
         background-color: $secondary;
+        .button-title{
+          color: white;
+        }
       }
-      &.background-tertairy{
+      &.background-gray {
+        background-color: $text;
+        .button-title{
+          color: white;
+        }
+      }
+      &.background-tertairy {
         background-color: $tertairy;
+        .button-title{
+          color: white;
+        }
       }
-      &.borderd{
+
+      &.ghost {
+        .button-title {
+          border-bottom: 2px solid $text;
+        }
+      }
+      &.background-red {
+        background-color: red;
+        .button-title {
+          color: white;
+          border-bottom: 2px solid white;
+        }
+      }
+      &.borderd {
         border: 1px solid $text;
       }
       .button-title {
@@ -57,10 +91,27 @@ html #root {
   }
 
   //genaral
+
+  .menu-item{
+    font-size: 18px;
+    font-weight: 500;
+    padding: 0 5px;
+    color: white;
+    text-decoration: none;
+    &.button{
+      color: white;
+      padding: 10px 15px;
+      background: $text;
+    }
+  }
+
+  p {
+    margin: 0;
+  }
   .heading {
     min-width: 100%;
   }
-  .grid-container{
+  .grid-container {
     min-width: 100%;
     max-width: 100%;
     display: flex;

@@ -1,4 +1,17 @@
 html #root {
+  .posts{
+    .button-row{
+      min-width: 100%;
+      max-width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      .button-wrap{
+        min-width: calc(100% / 2) !important;
+        max-width: calc(100% / 2) !important;
+
+      }
+    }
+  }
   .car-overview,
   .posts{
     .one-third {
@@ -38,7 +51,7 @@ html #root {
         min-width: 100%;
         .button {
           min-width: 100%;
-          padding: 10px;
+          padding: 10px 0;
           display: block;
           text-align: center;
         }

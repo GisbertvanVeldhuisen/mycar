@@ -10,6 +10,11 @@ html #root .container {
   flex-wrap: wrap;
 }
 
+html #root .column.full {
+  min-width: 100%;
+  max-width: 100%;
+}
+
 html #root .column.one-half {
   min-width: calc(100% / 2 - 10px);
   max-width: calc(100% / 2 - 10px);
@@ -34,14 +39,49 @@ html #root .image-container {
 
 html #root .button-wrap .button {
   text-decoration: none;
+  padding: 10px 15px;
+}
+
+html #root .button-wrap .button .button-title {
+  font-weight: 600;
+  font-size: 16px;
 }
 
 html #root .button-wrap .button.background-secondary {
   background-color: #0072ce;
 }
 
+html #root .button-wrap .button.background-secondary .button-title {
+  color: white;
+}
+
+html #root .button-wrap .button.background-gray {
+  background-color: #363636;
+}
+
+html #root .button-wrap .button.background-gray .button-title {
+  color: white;
+}
+
 html #root .button-wrap .button.background-tertairy {
   background-color: #003791;
+}
+
+html #root .button-wrap .button.background-tertairy .button-title {
+  color: white;
+}
+
+html #root .button-wrap .button.ghost .button-title {
+  border-bottom: 2px solid #363636;
+}
+
+html #root .button-wrap .button.background-red {
+  background-color: red;
+}
+
+html #root .button-wrap .button.background-red .button-title {
+  color: white;
+  border-bottom: 2px solid white;
 }
 
 html #root .button-wrap .button.borderd {
@@ -51,6 +91,24 @@ html #root .button-wrap .button.borderd {
 html #root .button-wrap .button .button-title {
   text-decoration: none;
   color: black;
+}
+
+html #root .menu-item {
+  font-size: 18px;
+  font-weight: 500;
+  padding: 0 5px;
+  color: white;
+  text-decoration: none;
+}
+
+html #root .menu-item.button {
+  color: white;
+  padding: 10px 15px;
+  background: #363636;
+}
+
+html #root p {
+  margin: 0;
 }
 
 html #root .heading {
@@ -63,6 +121,10 @@ html #root .grid-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+
+html #root #header {
+  background-color: #003791;
 }
 
 html #root #header .container {
@@ -83,15 +145,37 @@ html #root #header .main-menu-container {
   margin: auto 0 auto auto;
 }
 
-html #root #header .menu-item {
-  font-size: 18px;
-  font-weight: 500;
-  color: black;
-  text-decoration: none;
+html #root .footer {
+  background-color: #0072ce;
 }
 
-html #root #header .menu-item.button {
-  background: #0072ce;
+html #root .footer .container .main-menu-container {
+  margin: auto 0;
+}
+
+html #root .socket {
+  background-color: #003791;
+}
+
+html #root .socket .container {
+  padding: 10px 0;
+}
+
+html #root .socket .container p {
+  margin: 0 auto;
+  color: white;
+}
+
+html #root .posts .button-row {
+  min-width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+html #root .posts .button-row .button-wrap {
+  min-width: calc(100% / 2) !important;
+  max-width: calc(100% / 2) !important;
 }
 
 html #root .car-overview .one-third,
@@ -144,7 +228,7 @@ html #root .posts .one-third .button-wrap {
 html #root .car-overview .one-third .button-wrap .button,
 html #root .posts .one-third .button-wrap .button {
   min-width: 100%;
-  padding: 10px;
+  padding: 10px 0;
   display: block;
   text-align: center;
 }
@@ -154,5 +238,46 @@ html #root .posts .one-third .button-wrap .button-title {
   color: white;
   font-size: 16px;
   font-weight: 600;
+}
+
+html #root .users {
+  background-color: #0072ce;
+}
+
+html #root .users .full .user {
+  margin: 10px 0;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: white;
+}
+
+html #root .users .full .user .username {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+html #root .users .full .button-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+html #root .admin-navigation {
+  background-color: #363636;
+}
+
+html #root .admin-navigation .heading {
+  text-align: center;
+  color: white;
+}
+
+html #root .admin-navigation .container {
+  display: block;
+}
+
+html #root .admin-navigation .container .button-wrap {
+  text-align: center;
+  margin: 30px 0;
 }
 

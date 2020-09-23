@@ -1,0 +1,16 @@
+html #root {
+  .admin-navigation {
+    background-color: $text;
+    .heading{
+      text-align: center;
+      color: white;
+    }
+    .container {
+      display: block;
+      .button-wrap {
+        text-align: center;
+        margin: 30px 0;
+      }
+    }
+  }
+}

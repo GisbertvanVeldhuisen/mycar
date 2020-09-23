@@ -1,0 +1,20 @@
+html #root {
+  .footer {
+    background-color: $secondary;
+    .container{
+      .main-menu-container{
+        margin: auto 0;
+      }
+    }
+  }
+  .socket {
+    background-color: $tertairy;
+    .container {
+      padding: 10px 0;
+      p {
+        margin: 0 auto;
+        color: white;
+      }
+    }
+  }
+}

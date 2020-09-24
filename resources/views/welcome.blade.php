@@ -225,14 +225,6 @@
                 </div>
             </div>
         </div>
-        <div class="section new-post" style="">
-            <div class="container">
-                <div class="heading">
-                    <h3>Add a new car</h3>
-                </div>
-
-            </div>
-        </div>
         <div class="section reactions" style="">
             <div class="container">
                 <div class="heading">

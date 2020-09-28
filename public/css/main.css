@@ -93,6 +93,76 @@ html #root .button-wrap .button .button-title {
   color: black;
 }
 
+html #root input {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px 25px 10px 25px;
+  background: transparent;
+  border: none;
+  color: #363636;
+}
+
+html #root input[type=file] {
+  border: none !important;
+  padding: 30px 0;
+}
+
+html #root input[type=submit] {
+  background: #0072ce;
+  font-weight: 600;
+  color: white;
+  text-transform: capitalize;
+  margin: 20px 0 0 auto;
+  border-radius: 3px;
+}
+
+html #root input::-moz-placeholder {
+  font-size: 16px;
+  font-weight: 600;
+  color: #363636;
+}
+
+html #root input:-ms-input-placeholder {
+  font-size: 16px;
+  font-weight: 600;
+  color: #363636;
+}
+
+html #root input::placeholder {
+  font-size: 16px;
+  font-weight: 600;
+  color: #363636;
+}
+
+html #root textarea {
+  padding: 29px 25px 10px 25px;
+  font-family: "Poppins", sans-serif;
+  border: none;
+  border-radius: 3px;
+  font-size: 16px;
+  font-weight: 500;
+  background: transparent;
+  color: #363636;
+}
+
+html #root textarea::-moz-placeholder {
+  font-size: 16px;
+  font-weight: 500;
+  color: #363636;
+}
+
+html #root textarea:-ms-input-placeholder {
+  font-size: 16px;
+  font-weight: 500;
+  color: #363636;
+}
+
+html #root textarea::placeholder {
+  font-size: 16px;
+  font-weight: 500;
+  color: #363636;
+}
+
 html #root .menu-item {
   font-size: 18px;
   font-weight: 500;
@@ -163,6 +233,50 @@ html #root .socket .container {
 
 html #root .socket .container p {
   margin: 0 auto;
+  color: white;
+}
+
+html #root .section.form form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 50px 50px;
+  width: 100%;
+  background-color: #f2f2f2;
+  border-radius: 15px;
+}
+
+html #root .section.form form .heading {
+  text-transform: capitalize;
+  color: #363636;
+}
+
+html #root .section.form form .field {
+  margin: 10px 0;
+  border: 2px solid #363636;
+  border-radius: 3px;
+}
+
+html #root .section.form form .one-half {
+  min-width: calc(100% / 2 - 10px);
+  max-width: calc(100% / 2 - 10px);
+}
+
+html #root .header {
+  position: relative;
+}
+
+html #root .header:before {
+  content: "";
+  background: black;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+}
+
+html #root .header .heading {
+  position: relative;
   color: white;
 }
 
@@ -279,5 +393,68 @@ html #root .admin-navigation .container {
 html #root .admin-navigation .container .button-wrap {
   text-align: center;
   margin: 30px 0;
+}
+
+html #root .reactions .full {
+  min-width: inherit;
+  width: 100%;
+  margin: 10px 0;
+  background: #003791;
+  border-radius: 3px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+html #root .reactions .full:nth-child(3) {
+  padding: 25px;
+}
+
+html #root .reactions .full .reaction {
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+}
+
+html #root .reactions .full .username {
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+}
+
+html #root .reactions .full textarea {
+  background: #0072ce;
+  min-width: 100%;
+  max-width: 100%;
+  color: white !important;
+}
+
+html #root .filter {
+  background-color: #363636;
+}
+
+html #root .filter .heading {
+  color: white;
+}
+
+html #root .filter .filter .brands .brand {
+  color: white;
+  padding: 10px;
+  margin: 0 10px;
+  border-radius: 3px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+html #root .filter .filter .brands .brand:nth-child(1) {
+  margin-left: 0;
+}
+
+html #root .filter .filter .brands .brand:nth-child(odd) {
+  background-color: #0072ce;
+}
+
+html #root .filter .filter .brands .brand:nth-child(even) {
+  background-color: #003791;
 }
 

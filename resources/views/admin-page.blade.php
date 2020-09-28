@@ -9,7 +9,7 @@
             <div class="container">
                 <div class="column full">
                     <div class="heading">
-                        <h1>home page edit</h1>
+                        <h1>Admin pagina</h1>
                         <span class="intro">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                         Error ex pariatur praesentium quo tempore temporibus vel vero voluptate.
@@ -18,18 +18,21 @@
                 </div>
             </div>
         </div>
-        <div class="section form">
+        <div class="section admin-navigation" style="">
             <div class="container">
-                <form class="home-edit" action="">
-                    <div class="heading">
-                        <h3>homepage edit</h3>
-                    </div>
-                    <input class="field one-half" placeholder="title" type="text">
-                    <textarea class="field one-half" placeholder="intro tekst.."></textarea>
-                    <input class="field one-half" type="file">
-                    <textarea class="field one-half" placeholder="tekst in blok naast afbeelding"></textarea>
-                    <input value="Bijwerken" type="submit">
-                </form>
+                <div class="heading">
+                    <h3>admin navigation</h3>
+                </div>
+                <div class="button-wrap">
+                    <a class="button background-secondary" href="/test">
+                        <span class="button-title">Homepage edit</span>
+                    </a>
+                </div>
+                <div class="button-wrap">
+                    <a class="button background-secondary" href="#">
+                        <span class="button-title">Admin panel</span>
+                    </a>
+                </div>
             </div>
         </div>
     </div>

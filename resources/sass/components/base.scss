@@ -44,26 +44,26 @@ html #root {
     .button {
       text-decoration: none;
       padding: 10px 15px;
-      .button-title{
+      .button-title {
         font-weight: 600;
         font-size: 16px;
       }
 
       &.background-secondary {
         background-color: $secondary;
-        .button-title{
+        .button-title {
           color: white;
         }
       }
       &.background-gray {
         background-color: $text;
-        .button-title{
+        .button-title {
           color: white;
         }
       }
       &.background-tertairy {
         background-color: $tertairy;
-        .button-title{
+        .button-title {
           color: white;
         }
       }
@@ -92,13 +92,59 @@ html #root {
 
   //genaral
 
-  .menu-item{
+  input {
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px 25px 10px 25px;
+    background: transparent;
+    border: none;
+    color: $text;
+
+    &[type=file] {
+      border: none !important;
+      padding: 30px 0;
+    }
+
+    &[type=submit] {
+      background: $secondary;
+      font-weight: 600;
+      color: white;
+      text-transform: capitalize;
+      margin: 20px 0 0 auto;
+      border-radius: 3px;
+    }
+
+    &::placeholder {
+      font-size: 16px;
+      font-weight: 600;
+      color: $text;
+    }
+  }
+  textarea {
+    padding: 29px 25px 10px 25px;
+    font-family: $font-family;
+    border: none;
+    border-radius: 3px;
+    font-size: 16px;
+    font-weight: 500;
+    background: transparent;
+    color: $text;
+
+    &::placeholder {
+      font-size: 16px;
+      font-weight: 500;
+      color: $text;
+    }
+
+  }
+
+  .menu-item {
     font-size: 18px;
     font-weight: 500;
     padding: 0 5px;
     color: white;
     text-decoration: none;
-    &.button{
+    &.button {
       color: white;
       padding: 10px 15px;
       background: $text;

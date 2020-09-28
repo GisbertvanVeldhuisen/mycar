@@ -1,0 +1,27 @@
+html #root {
+  .section.form {
+    form {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 50px 50px;
+      width: 100%;
+      background-color: #f2f2f2;
+      border-radius: 15px;
+
+      .heading{
+        text-transform: capitalize;
+        color: $text;
+      }
+      .field{
+        margin: 10px 0;
+        border: 2px solid $text;
+        border-radius: 3px;
+      }
+      .one-half{
+        min-width: calc(100% / 2 - 10px);
+        max-width: calc(100% / 2 - 10px);
+      }
+    }
+  }
+}

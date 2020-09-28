@@ -1,0 +1,37 @@
+html #root {
+
+  .reactions {
+    .full {
+      min-width: inherit;
+      width: 100%;
+      margin: 10px 0;
+      background: $tertairy;
+      border-radius: 3px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      &:nth-child(3) {
+        padding: 25px;
+      }
+      .reaction{
+        font-size: 16px;
+        font-weight: 500;
+        color: white;
+      }
+
+      .username{
+        font-size: 16px;
+        font-weight: 600;
+        color: white;
+      }
+      textarea {
+        background: $secondary;
+        min-width: 100%;
+        max-width: 100%;
+        color: white!important;
+
+
+      }
+    }
+  }
+}

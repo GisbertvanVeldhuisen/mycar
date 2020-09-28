@@ -231,7 +231,7 @@
                     <h3>reactions</h3>
                 </div>
                 <div class="column full">
-                    <textarea class="new-reaction"></textarea>
+                    <textarea placeholder="Laat hier een reactie achter..." class="new-reaction"></textarea>
                 </div>
                 <div class="column full">
                     <p class="reaction">Dit is een geplaaste reactie</p>

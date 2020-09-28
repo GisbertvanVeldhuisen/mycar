@@ -1,0 +1,29 @@
+html #root {
+  .filter {
+    background-color: $text;
+    .heading{
+      color: white;
+    }
+    .filter {
+    .brands{
+      .brand{
+        color: white;
+        padding: 10px;
+        margin: 0 10px;
+        border-radius: 3px;
+        font-weight: 600;
+        text-transform: uppercase;
+        &:nth-child(1){
+          margin-left: 0;
+        }
+        &:nth-child(odd){
+          background-color: $secondary;
+        }
+        &:nth-child(even){
+          background-color: $tertairy;
+        }
+      }
+    }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+html #root{
+  .header{
+    position: relative;
+    &:before{
+      content: '';
+      background: black;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      opacity: 0.3;
+    }
+    .heading{
+      position: relative;
+      color: white;
+    }
+  }
+}

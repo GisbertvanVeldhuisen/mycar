@@ -15,7 +15,7 @@ class CreateReactionTable extends Migration
     {
         Schema::create('reaction', function (Blueprint $table) {
             $table->integer('reaction_id');
-            $table->timestamps('reaction_date');
+            $table->timestamp('reaction_date')->nullable();
         });
     }
 

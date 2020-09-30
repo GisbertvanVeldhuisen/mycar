@@ -24,7 +24,7 @@
                     <h3>admin navigation</h3>
                 </div>
                 <div class="button-wrap">
-                    <a class="button background-secondary" href="/test">
+                    <a class="button background-secondary" href="/home-edit">
                         <span class="button-title">Homepage edit</span>
                     </a>
                 </div>

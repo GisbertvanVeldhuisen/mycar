@@ -20,14 +20,15 @@
         </div>
         <div class="section form">
             <div class="container">
-                <form class="home-edit" action="">
+                <form class="home-edit" method="POST" action="">
+                    @csrf
                     <div class="heading">
                         <h3>homepage edit</h3>
                     </div>
-                    <input class="field one-half" placeholder="title" type="text">
-                    <textarea class="field one-half" placeholder="intro tekst.."></textarea>
-                    <input class="field one-half" type="file">
-                    <textarea class="field one-half" placeholder="tekst in blok naast afbeelding"></textarea>
+                    <input class="field one-half" placeholder="title" name="title" type="text">
+                    <textarea class="field one-half" name="intro" placeholder="intro tekst.."></textarea>
+                    {{--<input class="field one-half" type="file">--}}
+                        <textarea class="field one-half" name="text" placeholder="tekst in blok naast afbeelding"></textarea>
                     <input value="Bijwerken" type="submit">
                 </form>
             </div>

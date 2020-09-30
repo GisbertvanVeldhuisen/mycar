@@ -31,9 +31,17 @@ Route::get('/admin', function () {
     return view('admin-page');
 });
 
-Route::get('/test', function () {
+Route::get('/home-edit', function () {
     return view('test');
 });
+
+Route::get('/test2', function () {
+    return view('home-page');
+});
+
+Route::post('/home-edit', [\App\Http\Controllers\HomePageController::class, 'updateOrCreate']);
+
+Route::get('/', [\App\Http\Controllers\HomePageController::class, 'getHome']);
 
 
 Route::get('/index', 'IndexController@index');

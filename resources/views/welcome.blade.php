@@ -269,9 +269,12 @@
                 <div class="heading">
                     <h3>users</h3>
                 </div>
+
+                @foreach($users as $user)
                 <div class="column full">
                     <div class="user">
-                        <p class="username">{username}</p>
+                        <p>{{ $user->id }}</p>
+                        <p class="username">{{$user->name}}</p>
                         <div class="button-row">
                             <div class="button-wrap">
                                 <a class="button ghost" href="#">
@@ -286,40 +289,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="column full">
-                    <div class="user">
-                        <p class="username">{username}</p>
-                        <div class="button-row">
-                            <div class="button-wrap">
-                                <a class="button ghost" href="#">
-                                    <span class="button-title">ban</span>
-                                </a>
-                            </div>
-                            <div class="button-wrap">
-                                <a class="button background-red" href="#">
-                                    <span class="button-title">delete</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="column full">
-                    <div class="user">
-                        <p class="username">{username}</p>
-                        <div class="button-row">
-                            <div class="button-wrap">
-                                <a class="button ghost" href="#">
-                                    <span class="button-title">ban</span>
-                                </a>
-                            </div>
-                            <div class="button-wrap">
-                                <a class="button background-red" href="#">
-                                    <span class="button-title">delete</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
+
             </div>
         </div>
         <div class="section admin-navigation" style="">

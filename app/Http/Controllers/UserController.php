@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
@@ -10,6 +11,15 @@ class UserController extends Controller
     {
         $users = User::all();
 
-        return view('welcome', ['users' => $users]);
+        $amount = $users->count();
+
+        return view('welcome', ['users' => $users, 'amount' => $amount]);
+    }
+
+    public function delete(Request $request)
+    {
+        User::destroy($request->get('id'));
+
+        return redirect()->back();
     }
 }

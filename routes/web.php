@@ -13,13 +13,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/',
-    [\App\Http\Controllers\UserController::class, 'getUsers'],
 
-    function () {
-        return view('welcome');
-    }
-);
+// Routes for welcome blade
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Route::get('/', [\App\Http\Controllers\UserController::class, 'getUsers']);
+
+Route::post('/', [\App\Http\Controllers\UserController::class, 'delete']);
+//
+
+
+
 
 Route::get('/admin', function () {
     return view('admin-page');

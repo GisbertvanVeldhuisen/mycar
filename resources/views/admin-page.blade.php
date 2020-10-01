@@ -29,7 +29,7 @@
                     </a>
                 </div>
                 <div class="button-wrap">
-                    <a class="button background-secondary" href="">
+                    <a class="button background-secondary" href="{{ url('/admin-panel') }}">
                         <span class="button-title">Admin panel</span>
                     </a>
                 </div>

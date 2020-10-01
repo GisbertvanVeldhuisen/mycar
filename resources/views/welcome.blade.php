@@ -264,23 +264,6 @@
                 </div>
             </div>
         </div>
-        <div class="section admin-navigation" style="">
-            <div class="container">
-                <div class="heading">
-                    <h3>admin navigation</h3>
-                </div>
-                <div class="button-wrap">
-                    <a class="button background-secondary" href="#">
-                        Homepage edit
-                    </a>
-                </div>
-                <div class="button-wrap">
-                    <a class="button background-secondary" href="#">
-                        Admin panel
-                    </a>
-                </div>
-            </div>
-        </div>
     </div>
 </div>
 <div class="footer">

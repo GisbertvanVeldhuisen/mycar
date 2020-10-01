@@ -19,12 +19,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/', [\App\Http\Controllers\UserController::class, 'getUsers']);
+Route::get('/admin-panel', [\App\Http\Controllers\UserController::class, 'getUsers']);
 
-Route::post('/', [\App\Http\Controllers\UserController::class, 'delete']);
-//
-
-
+Route::post('/admin-panel', [\App\Http\Controllers\UserController::class, 'delete']);
 
 
 Route::get('/admin', function () {
@@ -41,7 +38,7 @@ Route::get('/test2', function () {
 
 Route::post('/home-edit', [\App\Http\Controllers\HomePageController::class, 'updateOrCreate']);
 
-Route::get('/', [\App\Http\Controllers\HomePageController::class, 'getHome']);
+Route::get('/test2', [\App\Http\Controllers\HomePageController::class, 'getHome']);
 
 
 Route::get('/index', 'IndexController@index');

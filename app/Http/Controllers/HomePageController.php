@@ -26,6 +26,7 @@ class HomePageController extends Controller
     public function getHome()
     {
         $homeinfo = Home::all();
+
         return view('home-page', ['homeinfo' => $homeinfo]);
     }
 }

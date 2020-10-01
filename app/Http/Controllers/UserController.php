@@ -13,7 +13,7 @@ class UserController extends Controller
 
         $amount = $users->count();
 
-        return view('welcome', ['users' => $users, 'amount' => $amount]);
+        return view('admin-panel', ['users' => $users, 'amount' => $amount]);
     }
 
     public function delete(Request $request)

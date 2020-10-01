@@ -19,10 +19,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// Admin panel page
 Route::get('/admin-panel', [\App\Http\Controllers\UserController::class, 'getUsers']);
 
 Route::post('/admin-panel', [\App\Http\Controllers\UserController::class, 'delete']);
 
+// Car page
+Route::get('/car', function () {
+    return view('car');
+});
+
+Route::get('/car', [\App\Http\Controllers\CarPageController::class, 'getBrands']);
 
 Route::get('/admin', function () {
     return view('admin-page');

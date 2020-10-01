@@ -3,11 +3,11 @@
         <div class="menu-container">
             <div class="menu-container">
                 <div class="logo-container">
-                    <img src="https://picsum.photos/200/75">
+                    <a href="{{ url('/') }}"><img src="https://picsum.photos/200/75"></a>
                 </div>
                 <div class="main-menu-container">
-                    <a class="menu-item" href="#">linkie</a>
-                    <a class="menu-item" href="#">linkie</a>
+                    <a class="menu-item" href="{{ url('/car') }}">Cars</a>
+                    <a class="menu-item" href="{{ url('/admin') }}">Admin</a>
                     @guest
                         <a class="menu-item button background-gray" href="{{ route('login') }}">{{ __('Login') }}</a>
                         @if (Route::has('register'))

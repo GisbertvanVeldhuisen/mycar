@@ -18,6 +18,7 @@ class CreateHomeTable extends Migration
             $table->text('title');
             $table->text('intro_text');
             $table->text('text_image');
+            $table->text('text_image');
             $table->timestamps();
         });
     }

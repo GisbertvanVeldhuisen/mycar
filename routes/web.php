@@ -34,15 +34,13 @@ Route::get('/home-edit', function () {
 
 Route::post('/home-edit', [\App\Http\Controllers\HomePageController::class, 'updateOrCreate']);
 
-<<<<<<< Updated upstream
 Route::get('/test2', [\App\Http\Controllers\HomePageController::class, 'getHome']);
-=======
+
 Route::get('/home-edit', [\App\Http\Controllers\HomePageController::class, 'getFormInfo']);
 
 Route::get('/home2', function () {
     return view('home-page');
 });
->>>>>>> Stashed changes
 
 Route::get('/home2', [\App\Http\Controllers\HomePageController::class, 'getHome']);
 

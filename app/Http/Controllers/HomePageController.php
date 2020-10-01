@@ -26,12 +26,8 @@ class HomePageController extends Controller
 
     public function getHome()
     {
-<<<<<<< Updated upstream
-        $homeinfo = Home::all();
-
-=======
         $homeinfo = Home::find(1);
->>>>>>> Stashed changes
+
         return view('home-page', ['homeinfo' => $homeinfo]);
     }
     public function getFormInfo()

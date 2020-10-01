@@ -1,5 +1,4 @@
 <html>
-@foreach($homeinfo as $home)
 @include('includes/head')
 <body id="root">
 <div id="wrap_all">
@@ -10,9 +9,11 @@
             <div class="container">
                 <div class="column full">
                     <div class="heading">
-                        <h1>{{$home->title}}</h1>
+                        <h1>
+                            {{$homeinfo->title}}
+                        </h1>
                         <span class="intro">
-                        {{$home->intro_text}}
+                            {{$homeinfo->intro_text}}
                     </span>
                     </div>
                 </div>
@@ -21,7 +22,9 @@
         <div class="section tekstblock" style="">
             <div class="container">
                 <div class="column one-half">
-                    <p>{{$home->text_image}}</p>
+                    <p>
+                        {{$homeinfo->text_image}}
+                    </p>
                 </div>
 
                 <div class="column one-half image right">
@@ -35,7 +38,5 @@
 </div>
 @include('includes/footer')
 @include('includes/socket')
-@endforeach
-
 </body>
 </html>

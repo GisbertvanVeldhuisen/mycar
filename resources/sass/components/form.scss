@@ -13,6 +13,12 @@ html #root {
         text-transform: capitalize;
         color: $text;
       }
+      .title{
+        min-width: calc(100% / 2 - 10px);
+        max-width: calc(100% / 2 - 10px);
+        display: inline-block;
+        font-weight: 600;
+      }
       .field{
         margin: 10px 0;
         border: 2px solid $text;

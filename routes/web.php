@@ -29,17 +29,22 @@ Route::get('/admin', function () {
 });
 
 Route::get('/home-edit', function () {
-    return view('test');
-});
-
-Route::get('/test2', function () {
-    return view('home-page');
+    return view('home-page-edit');
 });
 
 Route::post('/home-edit', [\App\Http\Controllers\HomePageController::class, 'updateOrCreate']);
 
+<<<<<<< Updated upstream
 Route::get('/test2', [\App\Http\Controllers\HomePageController::class, 'getHome']);
+=======
+Route::get('/home-edit', [\App\Http\Controllers\HomePageController::class, 'getFormInfo']);
 
+Route::get('/home2', function () {
+    return view('home-page');
+});
+>>>>>>> Stashed changes
+
+Route::get('/home2', [\App\Http\Controllers\HomePageController::class, 'getHome']);
 
 Route::get('/index', 'IndexController@index');
 

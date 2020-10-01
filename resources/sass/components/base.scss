@@ -95,10 +95,10 @@ html #root {
   input {
     font-size: 16px;
     font-weight: 500;
-    padding: 10px 25px 10px 25px;
     background: transparent;
     border: none;
     color: $text;
+    padding: 10px 30px;
 
     &[type=file] {
       border: none !important;
@@ -121,7 +121,6 @@ html #root {
     }
   }
   textarea {
-    padding: 29px 25px 10px 25px;
     font-family: $font-family;
     border: none;
     border-radius: 3px;
@@ -129,10 +128,11 @@ html #root {
     font-weight: 500;
     background: transparent;
     color: $text;
+    padding: 25px 30px 0;
 
     &::placeholder {
       font-size: 16px;
-      font-weight: 500;
+      font-weight: 600;
       color: $text;
     }
 

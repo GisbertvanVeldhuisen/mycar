@@ -16,7 +16,7 @@ class CreateHomeTable extends Migration
         Schema::create('home', function (Blueprint $table) {
             $table->id();
             $table->text('title');
-            $table->text('intro_text');
+            $table->text('intro_text')->nullable();
             $table->text('text_image');
             $table->timestamps();
         });

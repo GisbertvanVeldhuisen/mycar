@@ -21,12 +21,18 @@ class HomePageController extends Controller
             ]
         );
 
+        return redirect()->back()->withInput();
     }
 
     public function getHome()
     {
-        $homeinfo = Home::all();
+        $homeinfo = Home::find(1);
 
         return view('home-page', ['homeinfo' => $homeinfo]);
+    }
+    public function getFormInfo()
+    {
+        $forminfo = Home::find(1);
+        return view('home-page-edit', ['forminfo' => $forminfo]);
     }
 }

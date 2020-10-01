@@ -1,4 +1,3 @@
-<html>
 @include('includes/head')
 <body id="root">
 <div id="wrap_all">
@@ -25,10 +24,15 @@
                     <div class="heading">
                         <h3>homepage edit</h3>
                     </div>
-                    <input class="field one-half" placeholder="title" name="title" type="text">
-                    <textarea class="field one-half" name="intro" placeholder="intro tekst.."></textarea>
-                    {{--<input class="field one-half" type="file">--}}
-                        <textarea class="field one-half" name="text" placeholder="tekst in blok naast afbeelding"></textarea>
+                    <span class="title">Title</span>
+                    <span class="title">Intro tekst</span>
+                    <input class="field one-half" value="@isset($forminfo->title){{ (old("title")) ?: $forminfo->title }}@endisset" name="title" type="text">
+
+                    <textarea class="field one-half" name="intro">@isset($forminfo->intro_text){{ (old("intro_text")) ?: $forminfo->intro_text }}@endisset</textarea>
+                    <span class="title">Afbeelding naast tekst</span>
+                    <span class="title">Tekst naast afbeelding</span>
+                    <input class="field one-half" type="file">
+                    <textarea class="field one-half" name="text">@isset($forminfo->text_image){{ (old("text_image")) ?: $forminfo->text_image }}@endisset</textarea>
                     <input value="Bijwerken" type="submit">
                 </form>
             </div>

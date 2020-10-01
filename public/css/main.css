@@ -96,10 +96,10 @@ html #root .button-wrap .button .button-title {
 html #root input {
   font-size: 16px;
   font-weight: 500;
-  padding: 10px 25px 10px 25px;
   background: transparent;
   border: none;
   color: #363636;
+  padding: 10px 30px;
 }
 
 html #root input[type=file] {
@@ -135,7 +135,6 @@ html #root input::placeholder {
 }
 
 html #root textarea {
-  padding: 29px 25px 10px 25px;
   font-family: "Poppins", sans-serif;
   border: none;
   border-radius: 3px;
@@ -143,23 +142,24 @@ html #root textarea {
   font-weight: 500;
   background: transparent;
   color: #363636;
+  padding: 25px 30px 0;
 }
 
 html #root textarea::-moz-placeholder {
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 600;
   color: #363636;
 }
 
 html #root textarea:-ms-input-placeholder {
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 600;
   color: #363636;
 }
 
 html #root textarea::placeholder {
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 600;
   color: #363636;
 }
 
@@ -249,6 +249,13 @@ html #root .section.form form {
 html #root .section.form form .heading {
   text-transform: capitalize;
   color: #363636;
+}
+
+html #root .section.form form .title {
+  min-width: calc(100% / 2 - 10px);
+  max-width: calc(100% / 2 - 10px);
+  display: inline-block;
+  font-weight: 600;
 }
 
 html #root .section.form form .field {

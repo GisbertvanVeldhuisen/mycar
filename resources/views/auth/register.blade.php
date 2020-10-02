@@ -1,6 +1,9 @@
-@extends('layouts.app')
 
-@section('content')
+<html>
+    @include('includes/head')
+<body id="root">
+<div id="wrap_all">
+    @include('includes/header')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -74,4 +77,8 @@
         </div>
     </div>
 </div>
-@endsection
+@include('includes/footer')
+@include('includes/socket')
+</body>
+</html>
+

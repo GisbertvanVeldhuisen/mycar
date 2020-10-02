@@ -13,13 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
 // Routes for welcome blade
 Route::get('/', function () {
     return view('welcome');
 });
 
-// Admin panel page
+//Admin panel page
 Route::get('/admin-panel', [\App\Http\Controllers\UserController::class, 'getUsers']);
 
 Route::post('/admin-panel', [\App\Http\Controllers\UserController::class, 'delete']);
@@ -31,10 +30,17 @@ Route::get('/car', function () {
 
 Route::get('/car', [\App\Http\Controllers\CarPageController::class, 'getBrands']);
 
+Route::get('/', [\App\Http\Controllers\UserController::class, 'getUsers']);
+
+Route::post('/', [\App\Http\Controllers\UserController::class, 'delete']);
+
+
+// Admin
 Route::get('/admin', function () {
     return view('admin-page');
 });
 
+// Home
 Route::get('/home-edit', function () {
     return view('home-page-edit');
 });
@@ -51,8 +57,20 @@ Route::get('/home2', function () {
 
 Route::get('/home2', [\App\Http\Controllers\HomePageController::class, 'getHome']);
 
+//Index
 Route::get('/index', 'IndexController@index');
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+//Post create and delete on the same url
+Route::get('/post', function (){
+    return view('post');
+});
+
+Route::post('/post', [\App\Http\Controllers\PostController::class, 'create']);
+
+Route::get('/post', [\App\Http\Controllers\PostController::class, 'getPost']);
+
+Route::put('/post', [\App\Http\Controllers\PostController::class, 'deletePost']);

@@ -192,31 +192,6 @@
                 </div>
             </div>
         </div>
-        <div class="section filter" style="">
-            <div class="container">
-                <div class="heading">
-                    <h3>filter</h3>
-                </div>
-                <div class="column full">
-                    <div class="filter">
-                        <div class="brands">
-                       <span class="brand">
-                           auto merk
-                       </span>
-                            <span class="brand">
-                           auto merk
-                       </span>
-                            <span class="brand">
-                           auto merk
-                       </span>
-                            <span class="brand">
-                           auto merk
-                       </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 </div>
 <div class="footer">

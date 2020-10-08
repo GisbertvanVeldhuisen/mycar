@@ -236,6 +236,10 @@ html #root .socket .container p {
   color: white;
 }
 
+html #root .section.form.info {
+  background: #f2f2f2;
+}
+
 html #root .section.form form {
   display: flex;
   flex-wrap: wrap;
@@ -267,6 +271,11 @@ html #root .section.form form .field {
 html #root .section.form form .one-half {
   min-width: calc(100% / 2 - 10px);
   max-width: calc(100% / 2 - 10px);
+}
+
+html #root .section.form form .one-full {
+  min-width: 100%;
+  max-width: 100%;
 }
 
 html #root .header {

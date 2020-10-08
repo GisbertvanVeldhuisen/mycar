@@ -7,4 +7,11 @@
     <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
     <title>elementen pagina</title>
+
+    @foreach($users as $user)
+        @if($user->id == 0)
+
+        @endif
+    @endforeach
+
 </head>

@@ -30,7 +30,7 @@ Route::get('/car', function () {
 
 Route::get('/car', [\App\Http\Controllers\CarPageController::class, 'getBrands']);
 
-Route::get('/', [\App\Http\Controllers\UserController::class, 'getUsers']);
+Route::get('/', [\App\Http\Controllers\UserController::class, 'getUsersInfo']);
 
 Route::post('/', [\App\Http\Controllers\UserController::class, 'delete']);
 
@@ -71,6 +71,14 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/post', function (){
     return view('post');
 });
+
+//Profile
+Route::get('/profile', function (){
+    return view('profile');
+});
+
+Route::get('/profile', [\App\Http\Controllers\UserController::class, 'getUsers']);
+
 
 Route::post('/post', [\App\Http\Controllers\PostController::class, 'create']);
 

@@ -16,6 +16,12 @@ class UserController extends Controller
         return view('admin-panel', ['users' => $users, 'amount' => $amount]);
     }
 
+    public function getUsersInfo()
+    {
+        $users = User::all();
+        return view('head', ['users' => $users]);
+    }
+
     public function delete(Request $request)
     {
         User::destroy($request->get('id'));

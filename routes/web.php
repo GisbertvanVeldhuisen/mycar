@@ -39,9 +39,9 @@ Route::post('/', [\App\Http\Controllers\UserController::class, 'delete']);
 Route::get('/admin', function () {
     return view('admin-page');
 });
-Route::get('/single', function () {
-    return view('single-post');
-});
+//Route::get('/single', function () {
+//    return view('single-post');
+//});
 
 // Home
 Route::get('/home-edit', function () {
@@ -77,3 +77,6 @@ Route::post('/post', [\App\Http\Controllers\PostController::class, 'create']);
 Route::get('/post', [\App\Http\Controllers\PostController::class, 'getPost']);
 
 Route::put('/post', [\App\Http\Controllers\PostController::class, 'deletePost']);
+
+//Single page
+Route::get('/{post_id}', [\App\Http\Controllers\PostController::class, 'singlePageContent'])->name('single-page');

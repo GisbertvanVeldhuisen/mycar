@@ -37,6 +37,7 @@
             @csrf
             <input type="hidden" name="_method" value="PUT">
             <input type="hidden" name="post_id" value="{{ $post->post_id }}">
+            <a href="{{ route('single-page',  $post->post_id) }}">Bekijk</a><br>
             <div class="button background-red">
                 <button class="button background-red" type="submit">Delete</button>
             </div><br>

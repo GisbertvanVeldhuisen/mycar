@@ -46,12 +46,9 @@ class PostController extends Controller
         ]);
     }
 
-    function singlePageContent(){
-        $post = Post::find($post_id);
+    function singlePageContent($post_id){
 
-        $posts = Post::where('post_id', '=', $post->post_id)->get();
-
-//        $posts = Post::find($post_id);
+        $posts = Post::findOrFail($post_id);
 
         return view('single-post', [
 

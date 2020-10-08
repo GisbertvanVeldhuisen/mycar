@@ -4,17 +4,14 @@
 <div id="wrap_all">
     @include('includes/header')
 
-    @foreach($posts as $post)
         <div class="main">
             <div class="section header"
                  style="background-image: url(https://picsum.photos/400/400); background-repeat: no-repeat; background-size: cover; height: 400px">
                 <div class="container">
                     <div class="column full">
                         <div class="heading">
-                            <h1>{{$post->post_title}}</h1>
-                            <span class="intro">
-                        {{$post->post_intro}}
-                    </span>
+                            <h1>{{ $posts->post_title }}</h1>
+                            <span class="intro">{{ $posts->post_intro }}</span>
                         </div>
                     </div>
                 </div>
@@ -22,7 +19,7 @@
             <div class="section tekstblock" style="">
                 <div class="container">
                     <div class="column one-half">
-                        <p>$text</p>
+                        <p>{{ $posts->post_left_text }}</p>
                     </div>
 
                     <div class="column one-half image right">
@@ -40,7 +37,7 @@
                         </div>
                     </div>
                     <div class="column one-half">
-                        <p>{{$post->post_left_text}}</p>
+                        <p>{{ $posts->post_right_text }}</p>
                     </div>
                 </div>
             </div>
@@ -125,7 +122,6 @@
                 </div>
             </div>
         </div>
-    @endforeach
 </div>
 @include('includes/footer')
 @include('includes/socket')

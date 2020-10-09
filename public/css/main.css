@@ -215,6 +215,16 @@ html #root #header .main-menu-container {
   margin: auto 0 auto auto;
 }
 
+html #root #header .main-menu-container .dropdown-menu {
+  padding: 10px;
+  display: inline-block;
+  background: #0072ce;
+}
+
+html #root #header .main-menu-container .dropdown-menu #logout-form {
+  margin: 0;
+}
+
 html #root .footer {
   background-color: #0072ce;
 }
@@ -258,6 +268,11 @@ html #root .section.form form .title {
   font-weight: 600;
 }
 
+html #root .section.form form .title.one-third {
+  min-width: calc(100% / 3 - 10px);
+  max-width: calc(100% / 3 - 10px);
+}
+
 html #root .section.form form .field {
   margin: 10px 0;
   border: 2px solid #363636;
@@ -267,6 +282,38 @@ html #root .section.form form .field {
 html #root .section.form form .one-half {
   min-width: calc(100% / 2 - 10px);
   max-width: calc(100% / 2 - 10px);
+}
+
+html #root .section.login-succes .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+html #root .section.login-succes .container .heading {
+  text-align: center;
+}
+
+html #root .section.form .title.full {
+  min-width: 100%;
+  max-width: 100%;
+}
+
+html #root .section.form .full {
+  min-width: 100%;
+  max-width: 100%;
+}
+
+html #root .section.form .button {
+  margin: 0 0 0 auto;
+  background: #0072ce;
+  color: white;
+  border: none;
+  text-transform: capitalize;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 10px 30px;
+  border-radius: 3px;
 }
 
 html #root .header {

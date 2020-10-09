@@ -14,6 +14,14 @@ html #root {
     }
     .main-menu-container {
       margin: auto 0 auto auto;
+      .dropdown-menu{
+        padding: 10px;
+        display: inline-block;
+        background: $secondary;
+        #logout-form{
+          margin: 0;
+        }
+      }
     }
 
   }

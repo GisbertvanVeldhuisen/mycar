@@ -11,6 +11,39 @@
                 <form action="{{url('/post')}}" method="post">
                     @csrf
 
+                    <!-- Car content -->
+                    <h2 class="title">Car</h2>
+                    <h2 class="title">.</h2>
+
+                    <span class="title">Brand</span>
+                    <span class="title">Type</span>
+                    <select class="field one-half" name="car_brand">
+
+                        <option selected disabled>Select a brand</option>
+
+                        @foreach($brands as $brand)
+
+                            <option>{{ $brand->brand_name }}</option>
+
+                        @endforeach
+                    </select>
+                    <textarea class="field one-half" name="car_model"></textarea>
+
+                    <span class="title">Year</span>
+                    <span class="title">Mileage</span>
+                    <input class="field one-half" name="car_buildyear" type="text">
+                    <textarea class="field one-half" name="car_mileage"></textarea>
+
+                    <span class="title">Color</span>
+                    <span class="title">Horsepower</span>
+                    <input class="field one-half" name="car_color" type="text">
+                    <textarea class="field one-half" name="car_horsepower"></textarea>
+
+
+                    <!-- Post content -->
+                    <h2 class="title">Post content</h2>
+                    <h2 class="title">.</h2>
+
                     <span class="title">Title</span>
                     <span class="title">Intro below title</span>
                     <input class="field one-half" name="post_title" type="text">
@@ -25,6 +58,7 @@
                     <span class="title">Text right image</span>
                     <input class="field one-half" type="file">
                     <textarea class="field one-half" name="post_right_text"></textarea>
+
                     <input type="submit">
 
                 </form>
@@ -37,6 +71,7 @@
             @csrf
             <input type="hidden" name="_method" value="PUT">
             <input type="hidden" name="post_id" value="{{ $post->post_id }}">
+            <a href="{{ route('single-page',  $post->post_id) }}">Bekijk</a><br>
             <div class="button background-red">
                 <button class="button background-red" type="submit">Delete</button>
             </div><br>

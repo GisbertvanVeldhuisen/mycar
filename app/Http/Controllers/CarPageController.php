@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Brand;
+use App\Models\Post;
 
 class CarPageController extends Controller
 {
@@ -11,6 +12,13 @@ class CarPageController extends Controller
     {
         $brands = Brand::all()->sortBy('brand_name');
 
-        return view('car', ['brands' => $brands]);
+        $cars = Post::all();
+
+        return view('car', [
+
+            'brands' => $brands,
+            'cars' => $cars
+
+        ]);
     }
 }

@@ -14,6 +14,15 @@ class Post extends Model
     protected $primaryKey = 'post_id';
 
     protected $fillable = [
-        'post_title', 'post_intro', 'post_left_text', 'post_right_text'
+        'post_title',
+        'post_intro',
+        'post_left_text',
+        'post_right_text',
+        'car_brand',
+        'car_model',
+        'car_mileage',
+        'car_buildyear',
+        'car_color',
+        'car_horsepower'
     ];
 }

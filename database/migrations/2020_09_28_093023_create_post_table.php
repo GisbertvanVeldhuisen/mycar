@@ -20,6 +20,13 @@ class CreatePostTable extends Migration
             $table->text('post_left_text');
             $table->text('post_right_text');
             $table->timestamps();
+
+            $table->char('car_brand');
+            $table->char('car_model');
+            $table->integer('car_buildyear');
+            $table->integer('car_mileage');
+            $table->char('car_color');
+            $table->integer('car_horsepower');
         });
     }
 

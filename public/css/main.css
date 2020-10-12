@@ -256,6 +256,16 @@ html #root .section.form form {
   border-radius: 15px;
 }
 
+html #root .section.form form li {
+  list-style: none;
+  font-size: 16px;
+}
+
+html #root .section.form form li strong {
+  font-weight: 600;
+  border-bottom: 2px solid #74747474;
+}
+
 html #root .section.form form .heading {
   text-transform: capitalize;
   color: #363636;

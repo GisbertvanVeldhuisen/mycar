@@ -11,9 +11,9 @@
                 <div class="filter">
                     <div class="brands">
                         @foreach($brands as $brand)
-                            <span class="brand">
+                            <a class="brand">
                                 {{ $brand->brand_name }}
-                            </span>
+                            </a>
                         @endforeach
                     </div>
                 </div>

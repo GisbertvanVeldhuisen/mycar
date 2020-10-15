@@ -8,15 +8,26 @@ use App\Models\Post;
 
 class CarPageController extends Controller
 {
+
     public function getBrands()
     {
         $brands = Brand::all()->sortBy('brand_name');
 
-        $cars = Post::all();
+        return view('car', [
+
+            'brands' => $brands
+
+        ]);
+    }
+
+    public function getCars(Request $request)
+    {
+        $cat = $request->input('category');
+
+        $cars = Post::where('car_brand', $cat)->get();
 
         return view('car', [
 
-            'brands' => $brands,
             'cars' => $cars
 
         ]);

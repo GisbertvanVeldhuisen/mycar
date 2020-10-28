@@ -77,6 +77,8 @@ html #root .button-wrap .button.ghost .button-title {
 
 html #root .button-wrap .button.background-red {
   background-color: red;
+  color: white;
+  border: none;
 }
 
 html #root .button-wrap .button.background-red .button-title {
@@ -91,6 +93,14 @@ html #root .button-wrap .button.borderd {
 html #root .button-wrap .button .button-title {
   text-decoration: none;
   color: black;
+}
+
+html #root form {
+  margin: 0;
+}
+
+html #root form button {
+  cursor: pointer;
 }
 
 html #root input {

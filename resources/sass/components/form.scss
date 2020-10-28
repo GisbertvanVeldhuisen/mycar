@@ -21,6 +21,10 @@ html #root {
         max-width: calc(100% / 2 - 10px);
         display: inline-block;
         font-weight: 600;
+        &.one-third{
+          min-width: calc(100% / 3 - 10px);
+          max-width: calc(100% / 3 - 10px);
+        }
       }
       .field{
         margin: 10px 0;

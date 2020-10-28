@@ -1,0 +1,33 @@
+html #root {
+  .section.login-succes{
+    .container{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      .heading{
+        text-align: center;
+      }
+    }
+  }
+  .section.form {
+    .title.full {
+      min-width: 100%;
+      max-width: 100%;
+    }
+    .full{
+      min-width: 100%;
+      max-width: 100%;
+    }
+    .button {
+      margin: 0 0 0 auto;
+      background: $secondary;
+      color: white;
+      border: none;
+      text-transform: capitalize;
+      font-weight: 600;
+      font-size: 16px;
+      padding: 10px 30px;
+      border-radius: 3px;
+    }
+  }
+}

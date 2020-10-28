@@ -47,7 +47,10 @@
                 @enderror
                 <input id="password-confirm" type="password" class="field one-half form-control"
                        name="password_confirmation" required autocomplete="new-password">
-
+                <li>
+                    <input id="c1" required type="checkbox">
+                    <label for="c1">Ik ga <strong>akkoord</strong> dat mijn gegevens worden opgeslagen.</label>
+                </li>
                 <button type="submit" class="button">
                     {{ __('Register') }}
                 </button>

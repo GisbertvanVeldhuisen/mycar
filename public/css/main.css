@@ -77,6 +77,8 @@ html #root .button-wrap .button.ghost .button-title {
 
 html #root .button-wrap .button.background-red {
   background-color: red;
+  color: white;
+  border: none;
 }
 
 html #root .button-wrap .button.background-red .button-title {
@@ -91,6 +93,14 @@ html #root .button-wrap .button.borderd {
 html #root .button-wrap .button .button-title {
   text-decoration: none;
   color: black;
+}
+
+html #root form {
+  margin: 0;
+}
+
+html #root form button {
+  cursor: pointer;
 }
 
 html #root input {
@@ -254,6 +264,16 @@ html #root .section.form form {
   width: 100%;
   background-color: #f2f2f2;
   border-radius: 15px;
+}
+
+html #root .section.form form li {
+  list-style: none;
+  font-size: 16px;
+}
+
+html #root .section.form form li strong {
+  font-weight: 600;
+  border-bottom: 2px solid #74747474;
 }
 
 html #root .section.form form .heading {

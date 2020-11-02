@@ -75,6 +75,8 @@ html #root {
       }
       &.background-red {
         background-color: red;
+        color: white;
+        border: none;
         .button-title {
           color: white;
           border-bottom: 2px solid white;
@@ -91,6 +93,14 @@ html #root {
   }
 
   //genaral
+
+  form{
+    margin: 0;
+
+    button{
+      cursor: pointer;
+    }
+  }
 
   input {
     font-size: 16px;

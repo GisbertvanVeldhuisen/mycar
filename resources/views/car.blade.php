@@ -1,7 +1,7 @@
-@include('includes/head')
-<body id="root">
-<div id="wrap_all">
-    @include('includes/header')
+@extends ('layouts/app')
+
+
+@section ("content")
     <div class="section filter" style="">
         <div class="container">
             <div class="heading">
@@ -36,7 +36,5 @@
             </div>
         </div>
     </div>
-</div>
-@include('includes/footer')
-@include('includes/socket')
-</body>
+
+@endsection

@@ -9,14 +9,14 @@
                         users
 
                         <span>
-                            @if($amount >= 1)
-                                [{{$amount}}]
+                            @if($amount ?? '' >= 1)
+                                [{{$amount ?? ''}}]
                             @endif
                         </span>
                     </h3>
                 </div>
 
-                @if($amount >= 1)
+                @if($amount ?? '' >= 1)
 
                     @foreach($users as $user)
 
@@ -45,7 +45,7 @@
 
                     @endforeach
 
-                @elseif($amount == 0)
+                @elseif($amount ?? '' == 0)
 
                     <div class="column full">
                         <div class="user">

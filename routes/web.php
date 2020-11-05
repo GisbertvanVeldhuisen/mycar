@@ -16,9 +16,13 @@ use Illuminate\Support\Facades\Route;
 // Routes for welcome blade
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('home');
 
+<<<<<<< Updated upstream
 // Admin panel page
+=======
+// Admin panel
+>>>>>>> Stashed changes
 Route::get('/admin-panel', [\App\Http\Controllers\UserController::class, 'getUsers']);
 
 Route::post('/admin-panel', [\App\Http\Controllers\UserController::class, 'delete']);
@@ -31,10 +35,14 @@ Route::get('/car', function () {
 Route::get('/car', [\App\Http\Controllers\CarPageController::class, 'getCars']);
 
 
+<<<<<<< Updated upstream
 // Admin page
 Route::get('/admin', function () {
     return view('admin-page');
 });
+=======
+Route::post('/', [\App\Http\Controllers\UserController::class, 'delete']);
+>>>>>>> Stashed changes
 
 // Home
 Route::get('/home-edit', function () {
@@ -73,3 +81,8 @@ Route::put('/post', [\App\Http\Controllers\PostController::class, 'deletePost'])
 
 //Single page
 Route::get('/{post_id}', [\App\Http\Controllers\PostController::class, 'singlePageContent'])->name('single-page');
+
+//Admin check
+Route::middleware(['auth','admin'])->group(function () {
+    Route::get('/admin-panel', [\App\Http\Controllers\UserController::class, 'index']);
+});

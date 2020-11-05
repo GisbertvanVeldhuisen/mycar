@@ -7,6 +7,10 @@
     <div class="main">
         <div class="section form">
             <div class="container">
+                @guest
+                @if(Auth::guest())<h1>U moet een account aanmaken om een post te kunnen maken</h1>
+                    @endif
+                @else
                 <h1>Post aanmaken</h1>
                 <form action="{{url('/post')}}" method="post">
                     @csrf
@@ -77,6 +81,7 @@
             </div><br>
         </form>
     @endforeach()
+    @endguest
 </div>
 
 @include('includes/footer')

@@ -228,7 +228,7 @@ html #root #header .main-menu-container {
 html #root #header .main-menu-container .dropdown-menu {
   padding: 10px;
   display: inline-block;
-  background: #0072ce;
+  background: #363636;
 }
 
 html #root #header .main-menu-container .dropdown-menu #logout-form {
@@ -241,6 +241,29 @@ html #root .footer {
 
 html #root .footer .container .main-menu-container {
   margin: auto 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+html #root .footer .container .main-menu-container .menu-item {
+  margin: 0 5px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+html #root .footer .container .main-menu-container .menu-item:nth-child(1) {
+  margin-left: 0;
+}
+
+html #root .footer .container .main-menu-container .dropdown-menu {
+  padding: 10px;
+  display: inline-block;
+  background: #363636;
+}
+
+html #root .footer .container .main-menu-container .dropdown-menu #logout-form {
+  margin: 0;
 }
 
 html #root .socket {

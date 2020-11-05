@@ -1,9 +1,28 @@
 html #root {
   .footer {
     background-color: $secondary;
-    .container{
-      .main-menu-container{
+    .container {
+      .main-menu-container {
         margin: auto 0;
+        display: flex;
+        flex-wrap: wrap;
+        .menu-item {
+          margin: 0 5px;
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          &:nth-child(1) {
+            margin-left: 0;
+          }
+        }
+        .dropdown-menu {
+          padding: 10px;
+          display: inline-block;
+          background: $text;
+          #logout-form {
+            margin: 0;
+          }
+        }
       }
     }
   }

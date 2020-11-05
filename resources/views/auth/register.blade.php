@@ -1,8 +1,6 @@
-<html>
-@include('includes/head')
-<body id="root">
-<div id="wrap_all">
-    @include('includes/header')
+@extends ('layouts/app')
+
+@section ("content")
     <div class="section form">
         <div class="container">
             <form method="POST" action="{{ route('register') }}">
@@ -57,9 +55,5 @@
             </form>
         </div>
     </div>
-
-@include('includes/footer')
-@include('includes/socket')
-</body>
-</html>
+@endsection
 

@@ -14,18 +14,24 @@ use Illuminate\Support\Facades\Route;
 */
 
 // Routes for welcome blade
-Route::get('/', function () {
-    return view('welcome');
-})->name('home');
+
+Route::get('/', [\App\Http\Controllers\HomePageController::class, 'getHome'])->name('home');
+
 
 // Admin panel
 Route::get('/admin-panel', [\App\Http\Controllers\UserController::class, 'getUsers']);
 
 Route::post('/admin-panel', [\App\Http\Controllers\UserController::class, 'delete']);
 
+//elementen
+Route::get('/elementen', function () {
+    return view('welcome');
+});
+
+
 // Car page
 Route::get('/car', function () {
-    return view(    'car');
+    return view('car');
 });
 
 Route::get('/car', [\App\Http\Controllers\CarPageController::class, 'getCars']);
@@ -36,29 +42,24 @@ Route::get('/admin', function () {
 });
 Route::post('/', [\App\Http\Controllers\UserController::class, 'delete']);
 
-// Home
+// Home page edit
 Route::get('/home-edit', function () {
     return view('home-page-edit');
 });
 
 Route::post('/home-edit', [\App\Http\Controllers\HomePageController::class, 'updateOrCreate']);
 
-Route::get('/test2', [\App\Http\Controllers\HomePageController::class, 'getHome']);
 
 Route::get('/home-edit', [\App\Http\Controllers\HomePageController::class, 'getFormInfo']);
 
-Route::get('/home2', function () {
-    return view('home-page');
-});
 
-Route::get('/home2', [\App\Http\Controllers\HomePageController::class, 'getHome']);
 
 //Index
-Route::get('/index', 'IndexController@index');
+//Route::get('/index', 'IndexController@index');
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 //Post
 Route::get('/post', function (){
@@ -77,4 +78,6 @@ Route::get('/{post_id}', [\App\Http\Controllers\PostController::class, 'singlePa
 //Admin check
 Route::middleware(['auth','admin'])->group(function () {
     Route::get('/admin-panel', [\App\Http\Controllers\UserController::class, 'index']);
+    Route::get('/home-edit', [\App\Http\Controllers\UserController::class, 'index']);
+    Route::get('/admin', [\App\Http\Controllers\UserController::class, 'index']);
 });

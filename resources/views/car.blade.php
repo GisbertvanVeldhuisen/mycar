@@ -1,6 +1,5 @@
 @extends ('layouts/app')
 
-
 @section ("content")
     <div class="section filter" style="">
         <div class="container">

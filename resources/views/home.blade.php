@@ -1,7 +1,6 @@
-@include('includes/head')
-<body id="root">
-<div id="wrap_all">
-    @include('includes/header')
+@extends ('layouts/app')
+
+@section ("content")
     <div class="section login-succes">
         <div class="container">
             @if (session('status'))
@@ -65,10 +64,4 @@
             </div>
         </div>
     </div>
-</div>
-</div>
-@include('includes/footer')
-@include('includes/socket')
-</body>
-</html>
-
+@endsection

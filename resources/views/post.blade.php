@@ -1,21 +1,17 @@
-<html>
-@include('includes/head')
-<body id="root">
+@extends ('layouts/app')
 
-<div id="wrap_all">
-    @include('includes/header')
-    <div class="main">
-        <div class="section form">
-            <div class="container">
-                @guest
+@section ("content")
+    <div class="section form">
+        <div class="container">
+            @guest
                 @if(Auth::guest())<h1>U moet een account aanmaken om een post te kunnen maken</h1>
-                    @endif
-                @else
+                @endif
+            @else
                 <h1>Post aanmaken</h1>
                 <form action="{{url('/post')}}" method="post">
-                    @csrf
+                @csrf
 
-                    <!-- Car content -->
+                <!-- Car content -->
                     <h2 class="title">Car</h2>
                     <h2 class="title">.</h2>
 
@@ -55,7 +51,7 @@
 
                     <span class="title">Text left image</span>
                     <span class="title">Image right</span>
-                    <textarea class="field one-half" name="post_left_text" ></textarea>
+                    <textarea class="field one-half" name="post_left_text"></textarea>
                     <input class="field one-half" type="file">
 
                     <span class="title">Image left</span>
@@ -66,8 +62,8 @@
                     <input type="submit">
 
                 </form>
-            </div>
         </div>
+    </div>
     </div>
     @foreach($posts as $post)
         <p>{{$post->post_title}}</p>
@@ -78,14 +74,9 @@
             <a href="{{ route('single-page',  $post->post_id) }}">Bekijk</a><br>
             <div class="button background-red">
                 <button class="button background-red" type="submit">Delete</button>
-            </div><br>
+            </div>
+            <br>
         </form>
     @endforeach()
     @endguest
-</div>
-
-@include('includes/footer')
-@include('includes/socket')
-
-</body>
-</html>
+@endsection

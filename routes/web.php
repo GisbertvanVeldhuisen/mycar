@@ -28,9 +28,7 @@ Route::get('/car', function () {
     return view(    'car');
 });
 
-Route::post('/car', [\App\Http\Controllers\CarPageController::class, 'getCars']);
-
-Route::get('/car', [\App\Http\Controllers\CarPageController::class, 'getBrands']);
+Route::get('/car', [\App\Http\Controllers\CarPageController::class, 'getCars']);
 
 
 // Admin page

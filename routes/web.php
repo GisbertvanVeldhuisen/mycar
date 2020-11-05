@@ -78,6 +78,6 @@ Route::get('/{post_id}', [\App\Http\Controllers\PostController::class, 'singlePa
 //Admin check
 Route::middleware(['auth','admin'])->group(function () {
     Route::get('/admin-panel', [\App\Http\Controllers\UserController::class, 'index']);
-    Route::get('/home-edit', [\App\Http\Controllers\UserController::class, 'index']);
-    Route::get('/admin', [\App\Http\Controllers\UserController::class, 'index']);
+    Route::get('/home-edit', [\App\Http\Controllers\UserController::class, 'index1']);
+    Route::get('/admin', [\App\Http\Controllers\UserController::class, 'index2']);
 });

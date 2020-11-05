@@ -22,4 +22,8 @@ class UserController extends Controller
 
         return redirect()->back();
     }
+
+    public function index(){
+        return view('admin-panel');
+    }
 }

@@ -18,30 +18,23 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-//Admin panel page
+// Admin panel page
 Route::get('/admin-panel', [\App\Http\Controllers\UserController::class, 'getUsers']);
 
 Route::post('/admin-panel', [\App\Http\Controllers\UserController::class, 'delete']);
 
 // Car page
 Route::get('/car', function () {
-    return view('car');
+    return view(    'car');
 });
 
-Route::get('/car', [\App\Http\Controllers\CarPageController::class, 'getBrands']);
-
-Route::get('/', [\App\Http\Controllers\UserController::class, 'getUsers']);
-
-Route::post('/', [\App\Http\Controllers\UserController::class, 'delete']);
+Route::get('/car', [\App\Http\Controllers\CarPageController::class, 'getCars']);
 
 
-// Admin
+// Admin page
 Route::get('/admin', function () {
     return view('admin-page');
 });
-//Route::get('/single', function () {
-//    return view('single-post');
-//});
 
 // Home
 Route::get('/home-edit', function () {
@@ -67,7 +60,7 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-//Post create and delete on the same url
+//Post
 Route::get('/post', function (){
     return view('post');
 });

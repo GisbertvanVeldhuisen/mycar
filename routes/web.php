@@ -28,6 +28,8 @@ Route::get('/car', function () {
 
 Route::get('/car', [\App\Http\Controllers\CarPageController::class, 'getCars']);
 
+Route::get('/car-report', '\App\Http\Controllers\CarPageController@reportButton')->name('car-report');
+
 // Admin page
 Route::get('/admin', function () {
     return view('admin-page');

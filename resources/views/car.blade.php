@@ -21,8 +21,6 @@
                                 @endforeach
                             </select>
 
-                            <input type="text" title="color" name="color" placeholder="red">
-
                             <input type="submit" value="Submit">
                         </form>
                     </div>
@@ -40,6 +38,7 @@
 
                     <div class="column one-third">
                         <div class="image-container">
+                            <a href="{{route('car-report')}}" class="button"><button>Report</button></a>
                             <img src="https://picsum.photos/400/400" alt="">
                             <div class="owner">Owner</div>
                             <div class="brand">{{ $car->car_brand }}</div>

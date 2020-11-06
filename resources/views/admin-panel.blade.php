@@ -22,7 +22,8 @@
 
                     <div class="column full">
                         <div class="user">
-                            <p class="username">[{{ $user->id }}] {{ $user->name }} <br>{{ $user->email }}</p>
+                            <p class="username">[{{ $user->id }}] {{ $user->name }} <br
+                                >{{ $user->email }}</p>
 
                             <div class="button-row">
                                 <div class="button-wrap">

@@ -1,29 +1,49 @@
 html #root {
   .filter {
     background-color: $text;
-    .heading{
+    .heading {
       color: white;
     }
     .filter {
-    .brands{
-      .brand{
-        color: white;
-        padding: 10px;
-        margin: 0 10px;
-        border-radius: 3px;
-        font-weight: 600;
-        text-transform: uppercase;
-        &:nth-child(1){
-          margin-left: 0;
-        }
-        &:nth-child(odd){
-          background-color: $secondary;
-        }
-        &:nth-child(even){
-          background-color: $tertairy;
+      form {
+        select {
+          width: 300px;
+          background: transparent;
+          color: white;
+          padding: 10px 10px;
+          border: 1px solid white;
+          border-radius: 3px;
+          font-size: 18px;
+          margin: 0 10px;
+          option {
+            color: $text;
+            font-size: 18px;
+            background: transparent;
+          }
+          &:nth-child(1) {
+            margin-left: 0;
+          }
         }
       }
-    }
+      .brands {
+        .brand {
+          color: white;
+          padding: 10px;
+          margin: 0 10px;
+          border-radius: 3px;
+          font-weight: 600;
+          text-transform: uppercase;
+          &:nth-child(1) {
+            margin-left: 0;
+          }
+          &:nth-child(odd) {
+            background-color: $secondary;
+          }
+          &:nth-child(even) {
+            background-color: $tertairy;
+          }
+        }
+      }
     }
   }
 }

@@ -534,6 +534,27 @@ html #root .filter .heading {
   color: white;
 }
 
+html #root .filter .filter form select {
+  width: 300px;
+  background: transparent;
+  color: white;
+  padding: 10px 10px;
+  border: 1px solid white;
+  border-radius: 3px;
+  font-size: 18px;
+  margin: 0 10px;
+}
+
+html #root .filter .filter form select option {
+  color: #363636;
+  font-size: 18px;
+  background: transparent;
+}
+
+html #root .filter .filter form select:nth-child(1) {
+  margin-left: 0;
+}
+
 html #root .filter .filter .brands .brand {
   color: white;
   padding: 10px;

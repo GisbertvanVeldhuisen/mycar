@@ -19,7 +19,11 @@
     <div class="container">
         <div class="main-menu-container">
             <a class="menu-item" href="{{ url('/car') }}">Cars</a>
-            <a class="menu-item" href="{{ url('/admin') }}">Admin</a>
+
+            @if(Auth::user(1))
+                <a class="menu-item" href="{{ url('/admin') }}">Admin</a>
+            @endif
+
             @guest
                 <a class="menu-item button background-gray" href="{{ route('login') }}">{{ __('Login') }}</a>
                 @if (Route::has('register'))

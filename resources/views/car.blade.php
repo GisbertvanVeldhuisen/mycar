@@ -38,7 +38,13 @@
 
                     <div class="column one-third">
                         <div class="image-container">
-                            <a href="{{route('car-report')}}" class="button"><button>Report</button></a>
+                            <form method="post">
+                                @csrf
+                                <input type="hidden" name="postid" value="{{ $car->post_id }}">
+                                <div class="button-wrap">
+                                    <button class="button background-red" type="submit">Report</button>
+                                </div>
+                            </form>
                             <img src="https://picsum.photos/400/400" alt="">
                             <div class="owner">Owner</div>
                             <div class="brand">{{ $car->car_brand }}</div>

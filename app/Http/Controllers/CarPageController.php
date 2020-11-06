@@ -37,9 +37,11 @@ class CarPageController extends Controller
         ]);
     }
 
-    public function reportButton() {
+    public function reportButton(Request $request) {
 
-        DB::table('post')->increment('post_reported', 1);
+        $postid = $request->post('postid');
+
+        Post::where('post_id', $postid)->increment('post_reported', 1);
 
         return redirect()->back();
     }

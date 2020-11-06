@@ -28,13 +28,13 @@ Route::get('/car', function () {
 
 Route::get('/car', [\App\Http\Controllers\CarPageController::class, 'getCars']);
 
-Route::get('/car-report', '\App\Http\Controllers\CarPageController@reportButton')->name('car-report');
+Route::post('/car', [\App\Http\Controllers\CarPageController::class, 'reportButton']);
 
 // Admin page
 Route::get('/admin', function () {
     return view('admin-page');
 });
-Route::post('/', [\App\Http\Controllers\UserController::class, 'delete']);
+//Route::post('/', [\App\Http\Controllers\UserController::class, 'delete']);
 
 // Home page edit
 Route::get('/home-edit', function () {
@@ -63,8 +63,9 @@ Route::put('/post', [\App\Http\Controllers\PostController::class, 'deletePost'])
 Route::middleware(['auth','admin'])->group(function () {
     Route::get('/home-edit', [\App\Http\Controllers\UserController::class, 'index1']);
     Route::get('/admin', [\App\Http\Controllers\UserController::class, 'index2']);
-    Route::get('/admin-panel', [\App\Http\Controllers\UserController::class, 'getUsers']);
-    Route::post('/admin-panel', [\App\Http\Controllers\UserController::class, 'delete']);
+    Route::get('/admin-panel', [\App\Http\Controllers\AdminController::class, 'adminPanel']);
+    Route::post('/admin-panel', [\App\Http\Controllers\AdminController::class, 'deleteUser']);
+    Route::post('/admin-panel', [\App\Http\Controllers\AdminController::class, 'deletePost']);
 });
 
 //Single page for post (moet onderaan in web.php)

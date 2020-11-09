@@ -42,11 +42,7 @@ Route::get('/admin', function () {
 });
 Route::post('/', [\App\Http\Controllers\UserController::class, 'delete']);
 
-// Home page edit
-Route::get('/home-edit', function () {
-    return view('home-page-edit');
-});
-
+Route::post('/home-edit', [\App\Http\Controllers\HomePageController::class, 'updateOrCreate']);
 Route::post('/home-edit', [\App\Http\Controllers\HomePageController::class, 'updateOrCreate']);
 
 

@@ -18,11 +18,16 @@ class HomePageController extends Controller
                 'title' => $request->get('title'),
                 'intro_text' => $request->get('intro'),
                 'text_image' => $request->get('text'),
+                $path = $request->file('image-text')->store('public'),
+                $path = $request->file('logo')->store('public'),
+                $path = $request->file('header-image')->store('public'),
             ]
         );
 
+
         return redirect()->back()->withInput();
     }
+
 
     public function getHome()
     {
@@ -30,6 +35,7 @@ class HomePageController extends Controller
 
         return view('home-page', ['homeinfo' => $homeinfo]);
     }
+
     public function getFormInfo()
     {
         $forminfo = Home::find(1);

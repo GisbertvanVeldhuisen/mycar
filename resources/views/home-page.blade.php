@@ -26,7 +26,7 @@
 
             <div class="column one-half image right">
                 <div class="image">
-                    <img src="https://picsum.photos/400/400" alt="">
+                    <img src="{{ asset('/storage/L3mWNWYvOnKjGhy4yqlQBk4PTut8zhiSAtyhd5Rh.jpeg') }}" alt="">
                 </div>
             </div>
         </div>

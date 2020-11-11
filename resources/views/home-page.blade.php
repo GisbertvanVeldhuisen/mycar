@@ -2,7 +2,7 @@
 
 @section ("content")
     <div class="section header"
-         style="background-image: url(https://picsum.photos/400/400); background-repeat: no-repeat; background-size: cover; height: 400px">
+         style="background-image: url({{ asset('/storage/header-image.jpg') }}); background-repeat: no-repeat; background-size: cover; height: 400px">
         <div class="container">
             <div class="column full">
                 <div class="heading">
@@ -26,7 +26,7 @@
 
             <div class="column one-half image right">
                 <div class="image">
-                    <img src="{{ asset('/storage/L3mWNWYvOnKjGhy4yqlQBk4PTut8zhiSAtyhd5Rh.jpeg') }}" alt="">
+                    <img src="{{ asset('/storage/image-text.jpg') }}" alt="">
                 </div>
             </div>
         </div>
@@ -37,22 +37,19 @@
                 <h3>Results</h3>
             </div>
             <div class="grid-container">
-
                 @foreach($cars as $car)
-                    {{$car->post_id}}
-
                     <div class="column one-third">
                         <div class="image-container">
                             <form method="post">
                                 @csrf
-                                <input type="hidden" name="postid" value="{{--{{ $car->post_id }}--}}">
+                                <input type="hidden" name="postid" value="{{ $car->post_id }}">
                                 <div class="button-wrap">
                                     <button class="button background-red" type="submit">Report</button>
                                 </div>
                             </form>
                             <img src="https://picsum.photos/400/400" alt="">
                             <div class="owner">Owner</div>
-                            <div class="brand">{{--{{ $car->car_brand }}--}}</div>
+                            <div class="brand">{{ $car->car_brand }}</div>
                             <div class="button-wrap">
                                 <a class="button background-tertairy" href="#">
                                     <span class="button-title">like</span>

@@ -19,9 +19,9 @@ class HomePageController extends Controller
                 'title' => $request->get('title'),
                 'intro_text' => $request->get('intro'),
                 'text_image' => $request->get('text'),
-                $request->file('image-text')->storeAs('public', ''),
-                $request->file('logo')->store('public'),
-                $request->file('header-image')->store('public'),
+                $request->file('image-text')->storeAs('public', 'image-text.jpg'),
+                $request->file('logo')->storeAs('public', 'logo.png'),
+                $request->file('header-image')->storeAs('public', 'header-image.jpg'),
             ]
         );
 
@@ -33,8 +33,7 @@ class HomePageController extends Controller
     public function getHome()
     {
         $homeinfo = Home::find(1);
-        $cars = Post::take(3)->orderBy('created_at', 'desc');
-        /*dd($cars);*/
+        $cars = Post::take(3)->orderBy('created_at', 'desc')->get();
 
         return view('home-page', ['homeinfo' => $homeinfo ,'cars' => $cars]);
     }

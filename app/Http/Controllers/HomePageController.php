@@ -19,11 +19,17 @@ class HomePageController extends Controller
                 'title' => $request->get('title'),
                 'intro_text' => $request->get('intro'),
                 'text_image' => $request->get('text'),
-                $request->file('image-text')->storeAs('public', 'image-text.jpg'),
-                $request->file('logo')->storeAs('public', 'logo.png'),
-                $request->file('header-image')->storeAs('public', 'header-image.jpg'),
             ]
         );
+
+        if ($request->file('image-text'))
+            $request->file('image-text')->storeAs('public', 'image-text.jpg'. $request->file('logo')->getClientOriginalExtension());
+
+        if ($request->file('logo'))
+            $request->file('logo')->storeAs('public', 'logo.' . $request->file('logo')->getClientOriginalExtension());
+
+        if ($request->file('header-image'))
+            $request->file('header-image')->storeAs('public', 'header-image' . $request->file('header-image')->getClientOriginalExtension());
 
 
         return redirect()->back()->withInput();

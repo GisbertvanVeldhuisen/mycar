@@ -63,7 +63,7 @@
                 <h3>Reported posts</h3>
             </div>
             <div class="grid-container">
-                @if(!$report->isEmpty())
+                @if($report)
                     @foreach($report as $car)
                         <div class="column one-third">
                             <div class="image-container">

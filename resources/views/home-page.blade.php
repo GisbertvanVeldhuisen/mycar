@@ -7,10 +7,14 @@
             <div class="column full">
                 <div class="heading">
                     <h1>
-                        {{$homeinfo->title}}
+                        @if(!empty($homeinfo->title))
+                            {{$homeinfo->title}}
+                        @endif
                     </h1>
                     <span class="intro">
+                        @if(!empty($homeinfo->intro_text))
                             {{$homeinfo->intro_text}}
+                        @endif
                     </span>
                 </div>
             </div>
@@ -20,7 +24,9 @@
         <div class="container">
             <div class="column one-half">
                 <p>
-                    {{$homeinfo->text_image}}
+                    @if(!empty($homeinfo->intro_image))
+                        {{$homeinfo->text_image}}
+                    @endif
                 </p>
             </div>
 

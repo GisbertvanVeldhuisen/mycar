@@ -23,7 +23,7 @@ class HomePageController extends Controller
         );
 
         if ($request->file('image-text'))
-            $request->file('image-text')->storeAs('public', 'image-text.jpg'. $request->file('logo')->getClientOriginalExtension());
+            $request->file('image-text')->storeAs('public', 'image-text.jpg'. $request->file('image-text')->getClientOriginalExtension());
 
         if ($request->file('logo'))
             $request->file('logo')->storeAs('public', 'logo.' . $request->file('logo')->getClientOriginalExtension());

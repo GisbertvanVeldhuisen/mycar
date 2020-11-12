@@ -52,11 +52,11 @@
                     <span class="title">Text left image</span>
                     <span class="title">Image right</span>
                     <textarea class="field one-half" name="post_left_text"></textarea>
-                    <input class="field one-half" type="file">
+                    <input class="field one-half" type="file" name="image-text-left">
 
                     <span class="title">Image left</span>
                     <span class="title">Text right image</span>
-                    <input class="field one-half" type="file">
+                    <input class="field one-half" type="file" name="image-text-right">
                     <textarea class="field one-half" name="post_right_text"></textarea>
 
                     <input type="submit">

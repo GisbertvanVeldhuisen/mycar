@@ -25,11 +25,22 @@ class PostController extends Controller
             'car_horsepower' => $request->post('car_horsepower'),
             'user_id' => Auth::id(),
         ]);
+        $id = Auth::id();
+        $rules['template_file'] = 'required|file|mimes:png';
+
+
+        //$post_id = Post::where('post_id', );
+        if ($request->file('image-left-text'))
+            $request->file('image-left-text')->storeAs('public', $id. 'image-left-text.'. $request->file('image-left-text')->getClientOriginalExtension());
+
+        if ($request->file('image-right-text'))
+            $request->file('image-right-text')->storeAs('public', $id. 'image-right-text.'. $request->file('image-right-text')->getClientOriginalExtension());
 
         return redirect()->back();
     }
 
-    public function getPost(){
+    public function getPost()
+    {
 
         $brands = Brand::all()->sortBy('brand_name');
 
@@ -43,7 +54,8 @@ class PostController extends Controller
         ]);
     }
 
-    function singlePage($post_id){
+    function singlePage($post_id)
+    {
 
         $posts = Post::findOrFail($post_id);
 
@@ -54,7 +66,8 @@ class PostController extends Controller
         ]);
     }
 
-    function singlePageContent($post_id){
+    function singlePageContent($post_id)
+    {
 
         $posts = Post::findOrFail($post_id);
 
@@ -69,6 +82,6 @@ class PostController extends Controller
     {
         Post::destroy($request->get('post_id'));
 
-    return redirect()->back();
+        return redirect()->back();
     }
 }

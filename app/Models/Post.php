@@ -14,6 +14,7 @@ class Post extends Model
     protected $primaryKey = 'post_id';
 
     protected $fillable = [
+        'user_id',
         'post_title',
         'post_intro',
         'post_left_text',
@@ -25,4 +26,9 @@ class Post extends Model
         'car_color',
         'car_horsepower'
     ];
+
+    public function user()
+    {
+        return $this->belongsTo('App\Models\User', 'id', 'user_id');
+    }
 }

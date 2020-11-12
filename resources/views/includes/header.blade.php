@@ -21,8 +21,7 @@
                         @endif
                     @else
 
-                        {{--<a id="navbarDropdown" class="menu-item nav-link dropdown-toggle" href="{{  Auth::user()->name  }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>--}}
-                        <a id="navbarDropdown" class="menu-item nav-link dropdown-toggle" href="{{ Auth::user()->name }}" role="button"
+                        <a id="navbarDropdown" class="menu-item nav-link dropdown-toggle" href="user/{{Auth::user()->name}}" role="button"
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                             {{ Auth::user()->name }}
                         </a>

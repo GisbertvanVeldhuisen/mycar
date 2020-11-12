@@ -6,7 +6,7 @@
         <div class="container">
             <div class="column full">
                 <div class="heading">
-                    <h1>{{ $posts->post_title }}</h1>
+                    <h1>{{ $posts ->post_title }}</h1>
                     <span class="intro">{{ $posts->post_intro }}</span>
                 </div>
             </div>
@@ -15,7 +15,7 @@
     <div class="section tekstblock" style="">
         <div class="container">
             <div class="column one-half">
-                <p>{{ $posts->post_left_text }}</p>
+                <p>{{ $posts ->post_left_text }}</p>
             </div>
 
             <div class="column one-half image right">
@@ -33,7 +33,7 @@
                 </div>
             </div>
             <div class="column one-half">
-                <p>{{ $posts->post_right_text }}</p>
+                <p>{{ $posts ->post_right_text }}</p>
             </div>
         </div>
     </div>

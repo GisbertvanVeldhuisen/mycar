@@ -17,7 +17,6 @@ class CreatePostTable extends Migration
             $table->id('post_id');
             $table->integer('user_id');
             $table->integer('post_reported')->default(0);
-            $table->integer('user_id');
             $table->text('post_title');
             $table->text('post_intro');
             $table->text('post_left_text');

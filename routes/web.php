@@ -67,7 +67,7 @@ Route::middleware(['auth','admin'])->group(function () {
 //Single page for users
 Route::get('/{user:name}', [\App\Http\Controllers\ProfilePageController::class, 'getUser']);
 
-Route::get('/{post:post_id}', [\App\Http\Controllers\ProfilePageController::class, 'singlePageContent'])->name('single-page');
+Route::put('/{post:post_id}', [\App\Http\Controllers\ProfilePageController::class, 'singlePageContent'])->name('single-page');
 
 //Single page for post (moet onderaan in web.php)
-Route::get('/{post:post_id}', [\App\Http\Controllers\PostController::class, 'singlePageContent'])->name('single-page');
+//Route::put('/{post:post_id}', [\App\Http\Controllers\PostController::class, 'singlePageContent'])->name('single-page');

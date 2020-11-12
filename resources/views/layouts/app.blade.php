@@ -50,7 +50,7 @@
             @endguest
         </div>
         <div class="logo-container">
-            <img src="https://picsum.photos/200/100">
+            <img src="{{ asset('/storage/logo.png') }}">
         </div>
     </div>
 </div>

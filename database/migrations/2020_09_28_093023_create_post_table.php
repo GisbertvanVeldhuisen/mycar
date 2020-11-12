@@ -15,8 +15,8 @@ class CreatePostTable extends Migration
     {
         Schema::create('post', function (Blueprint $table) {
             $table->id('post_id');
+            $table->integer('user_id');
             $table->integer('post_reported')->default(0);
-            //$table->unsignedInteger('user_id');
             $table->text('post_title');
             $table->text('post_intro');
             $table->text('post_left_text');
@@ -29,8 +29,6 @@ class CreatePostTable extends Migration
             $table->integer('car_mileage');
             $table->char('car_color');
             $table->integer('car_horsepower');
-
-
         });
     }
 

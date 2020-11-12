@@ -8,10 +8,6 @@
             <div class="column full">
                 <div class="heading">
                     <h1>Admin pagina</h1>
-                    <span class="intro">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        Error ex pariatur praesentium quo tempore temporibus vel vero voluptate.
-                    </span>
                 </div>
             </div>
         </div>
@@ -22,7 +18,7 @@
                 <h3>admin navigation</h3>
             </div>
             <div class="button-wrap">
-                <a class="button background-secondary" href="/home-edit">
+                <a class="button background-secondary" href="{{url('/home-edit')}}">
                     <span class="button-title">Homepage edit</span>
                 </a>
             </div>

@@ -21,8 +21,6 @@
                                 @endforeach
                             </select>
 
-                            <input type="text" title="color" name="color" placeholder="red">
-
                             <input type="submit" value="Submit">
                         </form>
                     </div>
@@ -40,6 +38,13 @@
 
                     <div class="column one-third">
                         <div class="image-container">
+                            <form method="post">
+                                @csrf
+                                <input type="hidden" name="postid" value="{{ $car->post_id }}">
+                                <div class="button-wrap">
+                                    <button class="button background-red" type="submit">Report</button>
+                                </div>
+                            </form>
                             <img src="https://picsum.photos/400/400" alt="">
                             <div class="owner">Owner</div>
                             <div class="brand">{{ $car->car_brand }}</div>

@@ -20,9 +20,11 @@
         <div class="main-menu-container">
             <a class="menu-item" href="{{ url('/car') }}">Cars</a>
 
-            @if(Auth::user(1))
-                <a class="menu-item" href="{{ url('/admin') }}">Admin</a>
-            @endif
+            @auth
+                @if(Auth::user()->admin == 1)
+                    <a class="menu-item" href="{{ url('/admin') }}">Admin</a>
+                @endif
+            @endauth
 
             @guest
                 <a class="menu-item button background-gray" href="{{ route('login') }}">{{ __('Login') }}</a>
@@ -48,7 +50,7 @@
             @endguest
         </div>
         <div class="logo-container">
-            <img src="https://picsum.photos/200/100">
+            <img src="{{ asset('/storage/logo.png') }}">
         </div>
     </div>
 </div>

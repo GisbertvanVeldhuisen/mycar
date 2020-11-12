@@ -402,6 +402,21 @@ html #root .posts .one-third:hover .brand {
   opacity: 1;
 }
 
+html #root .car-overview .one-third form,
+html #root .posts .one-third form {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+html #root .car-overview .one-third form button,
+html #root .posts .one-third form button {
+  font-size: 10px;
+  text-transform: uppercase;
+  padding: 10px !important;
+  border-radius: 5px;
+}
+
 html #root .car-overview .one-third .owner,
 html #root .posts .one-third .owner {
   position: absolute;

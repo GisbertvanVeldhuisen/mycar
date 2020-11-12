@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Brand;
 use App\Models\Post;
+use Illuminate\Support\Facades\DB;
 
 class CarPageController extends Controller
 {
@@ -14,11 +15,10 @@ class CarPageController extends Controller
 
         $cat = $request->input('category');
 
-        $color = $request->input('color');
 
-        if($cat || $color):
+        if($cat):
 
-            $cars = Post::where('car_brand', $cat)->where('car_color', $color)->get();
+            $cars = Post::where('car_brand', $cat)->get();
 
         else:
 
@@ -36,4 +36,15 @@ class CarPageController extends Controller
 
         ]);
     }
+
+    public function reportButton(Request $request) {
+
+        $postid = $request->post('postid');
+
+        Post::where('post_id', $postid)->increment('post_reported', 1);
+
+        return redirect()->back();
+    }
+
+
 }

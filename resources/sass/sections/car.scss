@@ -23,6 +23,18 @@ html #root {
           opacity: 1;
         }
       }
+      form{
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        button{
+          font-size: 10px;
+          text-transform: uppercase;
+          padding: 10px!important;
+          border-radius: 5px;
+
+        }
+      }
       .owner{
         position: absolute;
         font-size: 20px;

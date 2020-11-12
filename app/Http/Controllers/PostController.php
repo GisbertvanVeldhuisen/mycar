@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Post;
+use App\Models\Comment;
 use App\Models\Brand;
 use Illuminate\Http\Request;
 use phpDocumentor\Reflection\DocBlock\Tags\Reference\Reference;
@@ -78,4 +79,6 @@ class PostController extends Controller
 
     return redirect()->back();
     }
+
+
 }

@@ -55,6 +55,19 @@ Route::get('/post', [\App\Http\Controllers\PostController::class, 'getPost']);
 
 Route::put('/post', [\App\Http\Controllers\PostController::class, 'deletePost']);
 
+//Comment
+Route::get('/comment', function (){
+    return view('comment');
+});
+
+Route::post('/comment', [\App\Http\Controllers\CommentController::class, 'create']);
+
+Route::get('/comment', [\App\Http\Controllers\CommentController::class, 'getComment']);
+
+Route::put('/comment', [\App\Http\Controllers\CommentController::class, 'deleteComment']);
+
+//Route::put('/comment', [\App\Http\Controllers\CommentController::class, 'getUsersComment']);
+
 //Admin check
 Route::middleware(['auth','admin'])->group(function () {
     Route::get('/home-edit', [\App\Http\Controllers\UserController::class, 'index1']);

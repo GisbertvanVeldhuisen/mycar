@@ -25,4 +25,6 @@ class Post extends Model
         'car_color',
         'car_horsepower'
     ];
+
+
 }

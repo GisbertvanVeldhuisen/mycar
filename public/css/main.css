@@ -95,6 +95,12 @@ html #root .button-wrap .button .button-title {
   color: black;
 }
 
+html #root .full-link-button {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
 html #root form {
   margin: 0;
 }
@@ -402,6 +408,7 @@ html #root .posts .button-row .button-wrap {
 
 html #root .car-overview .one-third,
 html #root .posts .one-third {
+  margin: 10px 0;
   overflow: hidden;
   position: relative;
 }

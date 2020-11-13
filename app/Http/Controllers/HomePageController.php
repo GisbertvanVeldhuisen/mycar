@@ -22,6 +22,12 @@ class HomePageController extends Controller
             ]
         );
 
+        $request->validate([
+            'image-text' => ['mimes:png'],
+            'logo' => ['mimes:png'],
+            'header-image' => ['mimes:png'],
+        ]);
+
         if ($request->file('image-text'))
             $request->file('image-text')->storeAs('public', 'image-text.'. $request->file('image-text')->getClientOriginalExtension());
 

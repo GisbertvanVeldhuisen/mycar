@@ -7,6 +7,7 @@
                 @if(Auth::guest())<h1>U moet een account aanmaken om een post te kunnen maken</h1>
                 @endif
             @else
+
                 <h1>Post aanmaken</h1>
                 <form action="{{--{{url('/post')}}--}}" enctype="multipart/form-data" method="POST">
                 @csrf
@@ -52,11 +53,18 @@
                     <span class="title">Text left image</span>
                     <span class="title">Image right</span>
                     <textarea class="field one-half" name="post_left_text"></textarea>
-                    <input class="field one-half" type="file" name="image-left-text">
+                    <div class="file-upload field one-half">
+                        <input type="file" name="image-left-text">
+                        <div class="error">{{ $errors->first('image-left-text') }}</div>
+                    </div>
+
 
                     <span class="title">Image left</span>
                     <span class="title">Text right image</span>
-                    <input class="field one-half" type="file" name="image-right-text">
+                    <div class="file-upload field one-half">
+                        <input type="file" name="image-right-text">
+                        <div class="error">{{ $errors->first('image-right-text') }}</div>
+                    </div>
                     <textarea class="field one-half" name="post_right_text"></textarea>
 
                     <input type="submit">

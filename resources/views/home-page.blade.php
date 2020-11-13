@@ -24,7 +24,7 @@
         <div class="container">
             <div class="column one-half">
                 <p>
-                    @if(!empty($homeinfo->intro_image))
+                    @if(!empty($homeinfo->text_image))
                         {{$homeinfo->text_image}}
                     @endif
                 </p>
@@ -32,7 +32,7 @@
 
             <div class="column one-half image right">
                 <div class="image">
-                    <img src="{{ asset('/storage/image-text.jpg') }}" alt="">
+                    <img src="{{ asset('/storage/image-text.png') }}" alt="">
                 </div>
             </div>
         </div>
@@ -54,7 +54,7 @@
                                 </div>
                             </form>
                             <img src="https://picsum.photos/400/400" alt="">
-                            <div class="owner">Owner</div>
+                            <div class="owner">owner</div>
                             <div class="brand">{{ $car->car_brand }}</div>
                             <div class="button-wrap">
                                 <a class="button background-tertairy" href="#">

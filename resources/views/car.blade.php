@@ -45,8 +45,8 @@
                                     <button class="button background-red" type="submit">Report</button>
                                 </div>
                             </form>
-                            <img src="https://picsum.photos/400/400" alt="">
-                            <div class="owner">Owner</div>
+                            <img src="{{asset('/storage/'.$car->post_id.'image-left-text.png') }}" alt="">
+                            <div class="owner">{{ $car->user_name }}</div>
                             <div class="brand">{{ $car->car_brand }}</div>
                             <div class="button-wrap">
                                 <a class="button background-tertairy" href="#">

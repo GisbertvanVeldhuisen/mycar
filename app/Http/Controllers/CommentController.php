@@ -68,11 +68,15 @@ class CommentController extends Controller
         return redirect()->back();
     }
 
-    public function getUsersComment()
+    public function getUsersComment(User $user)
     {
-        $users = User::all();
+//        $users = User::all();
+//
+//        return view('comment', ['users' => $users]);
 
-        return view('comment', ['users' => $users]);
+        return view('comment', [
+           'userid' => $user->id,
+        ]);
     }
 
 

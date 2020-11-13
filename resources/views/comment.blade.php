@@ -28,15 +28,17 @@
     </div>
     </div>
 
-{{--    @foreach($users as $user)--}}
-{{--        <p>{{$user->name}}</p>--}}
-{{--    @endforeach--}}
+
 
     @foreach($comments as $comment)
 
+
+
         <div class="comment">
             <div class="head">
-                <p></p><b>Naam</b></p>
+
+                <p></p><b>{{ $comment->user->name }}</b></p>
+
             <span>{{$comment->created_at->diffForHumans()}}</span>
 
                 {{--                Delete--}}

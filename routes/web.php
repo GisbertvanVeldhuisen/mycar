@@ -66,7 +66,7 @@ Route::get('/comment', [\App\Http\Controllers\CommentController::class, 'getComm
 
 Route::put('/comment', [\App\Http\Controllers\CommentController::class, 'deleteComment']);
 
-//Route::put('/comment', [\App\Http\Controllers\CommentController::class, 'getUsersComment']);
+Route::put('/comment', [\App\Http\Controllers\CommentController::class, 'getUsersComment']);
 
 //Admin check
 Route::middleware(['auth','admin'])->group(function () {

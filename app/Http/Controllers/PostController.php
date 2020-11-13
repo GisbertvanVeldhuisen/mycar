@@ -24,6 +24,7 @@ class PostController extends Controller
             'car_color' => $request->post('car_color'),
             'car_horsepower' => $request->post('car_horsepower'),
             'user_id' => Auth::id(),
+            'user_name' => Auth::user()->name,
         ]);
 
 
@@ -34,10 +35,10 @@ class PostController extends Controller
 
         //$post_id = Post::where('post_id', );
         if ($request->file('image-left-text'))
-            $request->file('image-left-text')->storeAs('public', $post->id . 'image-left-text.' . $request->file('image-left-text')->getClientOriginalExtension());
+            $request->file('image-left-text')->storeAs('public', $post->post_id . 'image-left-text.' . $request->file('image-left-text')->getClientOriginalExtension());
 
         if ($request->file('image-right-text'))
-            $request->file('image-right-text')->storeAs('public', $post->id . 'image-right-text.' . $request->file('image-right-text')->getClientOriginalExtension());
+            $request->file('image-right-text')->storeAs('public', $post->post_id . 'image-right-text.' . $request->file('image-right-text')->getClientOriginalExtension());
 
         return redirect()->back();
     }

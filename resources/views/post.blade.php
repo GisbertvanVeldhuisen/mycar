@@ -13,8 +13,10 @@
                 @csrf
 
                 <!-- Car content -->
-                    <h2 class="title">Car</h2>
-                    <h2 class="title">.</h2>
+                    <div class="heading">
+                        <h3>Car</h3>
+                    </div>
+
 
                     <span class="title">Brand</span>
                     <span class="title">Type</span>

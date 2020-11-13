@@ -4,6 +4,10 @@
 
     <div class="section results car-overview">
         <div class="container">
+            <div class="button-wrap"><a href="{{url('/post')}}" class="button background-tertairy">
+                    <span class="button-title">Post maken</span>
+                </a>
+            </div>
             <div class="heading">
                 <h3>Posts</h3>
             </div>

@@ -71,3 +71,4 @@ Route::get('/{post:post_id}', [\App\Http\Controllers\ProfilePageController::clas
 
 //Single page for post (moet onderaan in web.php)
 Route::get('/{post:post_id}', [\App\Http\Controllers\PostController::class, 'singlePageContent'])->name('single-page');
+Route::delete('/{post:post_id}', [\App\Http\Controllers\PostController::class, 'deletePost'])->name('delete-post');

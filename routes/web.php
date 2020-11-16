@@ -60,13 +60,12 @@ Route::get('/comment', function (){
     return view('comment');
 });
 
-Route::post('/comment', [\App\Http\Controllers\CommentController::class, 'create']);
+Route::post('/post/{post:post_id}', [\App\Http\Controllers\CommentController::class, 'create']);
 
-Route::get('/comment', [\App\Http\Controllers\CommentController::class, 'getComment']);
+Route::get('/post/{post:post_id}', [\App\Http\Controllers\CommentController::class, 'getComment']);
 
-Route::put('/comment', [\App\Http\Controllers\CommentController::class, 'deleteComment']);
+Route::put('/post/{post:post_id}', [\App\Http\Controllers\CommentController::class, 'deleteComment']);
 
-Route::put('/comment', [\App\Http\Controllers\CommentController::class, 'getUsersComment']);
 
 //Admin check
 Route::middleware(['auth','admin'])->group(function () {
@@ -80,8 +79,14 @@ Route::middleware(['auth','admin'])->group(function () {
 //Single page for users
 Route::get('/user/{user:name}', [\App\Http\Controllers\ProfilePageController::class, 'getUser']);
 
-Route::get('/{post:post_id}', [\App\Http\Controllers\ProfilePageController::class, 'singlePageContent'])->name('single-page');
+Route::get('/post/{post:post_id}', [\App\Http\Controllers\ProfilePageController::class, 'singlePageContent'])->name('single-page');
 
 //Single page for post (moet onderaan in web.php)
+
+
 Route::get('/{post:post_id}', [\App\Http\Controllers\PostController::class, 'singlePageContent'])->name('single-page');
 Route::delete('/{post:post_id}', [\App\Http\Controllers\PostController::class, 'deletePost'])->name('delete-post');
+
+Route::get('/post/{post:post_id}', [\App\Http\Controllers\PostController::class, 'singlePageContent'])->name('single-page');
+
+

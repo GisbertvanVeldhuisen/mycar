@@ -1,9 +1,8 @@
 @extends ('layouts/app')
 
 @section ("content")
-
     <div class="section header"
-         style="background-image: url({{ asset('/storage/header-image.png') }}); background-repeat: no-repeat; background-size: cover; height: 400px">
+         style="background-image: url(https://picsum.photos/400/400); background-repeat: no-repeat; background-size: cover; height: 400px">
         <div class="container">
             <div class="column full">
                 <div class="heading">
@@ -21,7 +20,7 @@
 
             <div class="column one-half image right">
                 <div class="image">
-                    <img src="{{ asset('/storage/'.$posts->post_id.'image-right-text.png') }}" alt="">
+                    <img src="https://picsum.photos/400/400" alt="">
                 </div>
             </div>
         </div>
@@ -30,7 +29,7 @@
         <div class="container">
             <div class="column one-half image left">
                 <div class="image">
-                    <img src="{{ asset('/storage/'.$posts->post_id.'image-left-text.png') }}" alt="">
+                    <img src="https://picsum.photos/400/400" alt="">
                 </div>
             </div>
             <div class="column one-half">
@@ -44,20 +43,40 @@
             <div class="heading">
                 <h3>reactions</h3>
             </div>
+
+            <form action="{{url('/post/{post:post_id}')}}" method="post" class="column full">
+                @csrf
+
+
+                <textarea placeholder="Laat hier een reactie achter..." name="comment_content" class="new-reaction"></textarea>
+
+            <input type="submit">
+            </form>
+
+
+        @foreach($comments as $comment)
+
             <div class="column full">
-                <textarea placeholder="Laat hier een reactie achter..." class="new-reaction"></textarea>
+                <p class="reaction">{{$comment->comment_content}}</p>
+                <p class="username">{{ $comment->user->name }}</p>
+                <span style="color:white">{{$comment->created_at->diffForHumans()}}</span>
             </div>
-            <div class="column full">
-                <p class="reaction">Dit is een geplaaste reactie</p>
-                <p class="username">username</p>
-            </div>
+
+                {{--                Delete--}}
+                <form action="" method="post" class="delete">
+                    @csrf
+                    <input type="hidden" name="_method" value="PUT">
+                    <input type="hidden" name="comment_id" value="{{ $comment->comment_id }}">
+                    <div class="button background-red">
+                        <button class="button background-red" type="submit">Delete</button>
+                    </div>
+                    <br>
+                </form>
+
+            @endforeach
+
+
         </div>
     </div>
-
-
-
-
-
-
     </div>
 @endsection

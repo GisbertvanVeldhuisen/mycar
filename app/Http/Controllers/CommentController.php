@@ -39,6 +39,17 @@ class CommentController extends Controller
         ]);
     }
 
+    public function commentOnPost(){
+
+        $comments = Comment::all();
+
+        return view('single-post', [
+
+            'comments' => $comments,
+
+        ]);
+    }
+
     public function singlePage($comment_id){
 
         $comments = Comment::findOrFail($comment_id);
@@ -68,16 +79,8 @@ class CommentController extends Controller
         return redirect()->back();
     }
 
-    public function getUsersComment(User $user)
-    {
-//        $users = User::all();
-//
-//        return view('comment', ['users' => $users]);
 
-        return view('comment', [
-           'userid' => $user->id,
-        ]);
-    }
+
 
 
 }

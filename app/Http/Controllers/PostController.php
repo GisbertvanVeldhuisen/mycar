@@ -74,11 +74,14 @@ class PostController extends Controller
     function singlePageContent($post_id)
     {
 
+        $comments = Comment::all();
+
         $posts = Post::findOrFail($post_id);
 
         return view('single-post', [
 
             'posts' => $posts,
+            'comments' => $comments
 
         ]);
     }

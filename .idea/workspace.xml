@@ -2,20 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78d48779-a5b2-4993-9c02-93d15261a0e0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/ProfilePageController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomePageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomePageController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CommentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CommentController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Post.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_25_124939_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_25_124939_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_28_093023_create_post_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_28_093023_create_post_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin-page.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin-page.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin-panel.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin-panel.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home-page.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home-page.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/includes/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profile.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProfilePageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProfilePageController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/single-post.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/single-post.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>

@@ -13,7 +13,7 @@ class PostController extends Controller
 {
     public function create(Request $request)
     {
-        Post::create([
+        $post = Post::create([
             'post_title' => $request->post('post_title'),
             'post_intro' => $request->post('post_intro'),
             'post_left_text' => $request->post('post_left_text'),
@@ -25,17 +25,21 @@ class PostController extends Controller
             'car_color' => $request->post('car_color'),
             'car_horsepower' => $request->post('car_horsepower'),
             'user_id' => Auth::id(),
+            'user_name' => Auth::user()->name,
         ]);
-        $id = Auth::id();
-        $rules['template_file'] = 'required|file|mimes:png';
 
+
+        $request->validate([
+            'image-left-text' => ['mimes:png'],
+            'image-right-text' => ['mimes:png'],
+        ]);
 
         //$post_id = Post::where('post_id', );
         if ($request->file('image-left-text'))
-            $request->file('image-left-text')->storeAs('public', $id. 'image-left-text.'. $request->file('image-left-text')->getClientOriginalExtension());
+            $request->file('image-left-text')->storeAs('public', $post->post_id . 'image-left-text.' . $request->file('image-left-text')->getClientOriginalExtension());
 
         if ($request->file('image-right-text'))
-            $request->file('image-right-text')->storeAs('public', $id. 'image-right-text.'. $request->file('image-right-text')->getClientOriginalExtension());
+            $request->file('image-right-text')->storeAs('public', $post->post_id . 'image-right-text.' . $request->file('image-right-text')->getClientOriginalExtension());
 
         return redirect()->back();
     }

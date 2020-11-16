@@ -29,7 +29,10 @@
                           name="intro">@isset($forminfo->intro_text){{ (old("intro_text")) ?: $forminfo->intro_text }}@endisset</textarea>
                 <span class="title">Afbeelding naast tekst</span>
                 <span class="title">Tekst naast afbeelding</span>
-                <input class="field one-half" type="file" name="image-text">
+                <div class="file-upload field one-half">
+                    <input type="file" name="image-text">
+                    <div class="error">{{ $errors->first('image-text') }}</div>
+                </div>
                 <textarea class="field one-half"
                           name="text">@isset($forminfo->text_image){{ (old("text_image")) ?: $forminfo->text_image }}@endisset</textarea>
 
@@ -38,8 +41,16 @@
                 </div>
                 <span class="title">site logo</span>
                 <span class="title">header image</span>
-                <input class="field one-half" type="file" name="logo">
-                <input class="field one-half" type="file" name="header-image">
+                <div class="file-upload field one-half">
+                    <input type="file" name="logo">
+                    <div class="error">{{ $errors->first('logo') }}</div>
+
+                </div>
+                <div class="file-upload field one-half">
+                    <input type="file" name="header-image">
+                    <div class="error">{{ $errors->first('header-image') }}</div>
+
+                </div>
                 <input value="Bijwerken" type="submit">
             </form>
         </div>

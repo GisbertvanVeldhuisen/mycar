@@ -24,7 +24,7 @@
         <div class="container">
             <div class="column one-half">
                 <p>
-                    @if(!empty($homeinfo->intro_image))
+                    @if(!empty($homeinfo->text_image))
                         {{$homeinfo->text_image}}
                     @endif
                 </p>
@@ -32,7 +32,7 @@
 
             <div class="column one-half image right">
                 <div class="image">
-                    <img src="{{ asset('/storage/image-text.jpg') }}" alt="">
+                    <img src="{{ asset('/storage/image-text.png') }}" alt="">
                 </div>
             </div>
         </div>
@@ -44,6 +44,7 @@
             </div>
             <div class="grid-container">
                 @foreach($cars as $car)
+
                     <div class="column one-third">
                         <div class="image-container">
                             <form method="post">
@@ -53,8 +54,8 @@
                                     <button class="button background-red" type="submit">Report</button>
                                 </div>
                             </form>
-                            <img src="https://picsum.photos/400/400" alt="">
-                            <div class="owner">Owner</div>
+                            <img src="{{asset('/storage/'.$car->post_id.'image-left-text.png') }}" alt="">
+                            <div class="owner">{{ $car->user_name }}</div>
                             <div class="brand">{{ $car->car_brand }}</div>
                             <div class="button-wrap">
                                 <a class="button background-tertairy" href="#">

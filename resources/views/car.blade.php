@@ -1,6 +1,56 @@
 @extends ('layouts/app')
 
+
+
+
+@section('meta')
+    <meta name="title" content="Search for a car">
+    <meta name="description" content="Take a look and maybe find your new car">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mycar/car.nl/">
+    <meta property="og:title" content="Search for a car">
+    <meta property="og:description" content="Take a look and maybe find your new car">
+    <meta property="og:image" content="{{asset('/storage/logo.png') }}">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://mycar/car.nl/">
+    <meta property="twitter:title" content="Search for a car">
+    <meta property="twitter:description" content="Take a look and maybe find your new car">
+    <meta property="twitter:image" content="{{asset('/storage/logo.png') }}">
+
+    <meta name="title" content="Search for a car">
+    <meta name="description" content="Take a look and maybe find your new car">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mycar/car.nl/">
+    <meta property="og:title" content="Search for a car">
+    <meta property="og:description" content="Take a look and maybe find your new car">
+    <meta property="og:image" content="{{asset('/storage/logo.png') }}">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://mycar/car.nl/">
+    <meta property="twitter:title" content="Search for a car">
+    <meta property="twitter:description" content="Take a look and maybe find your new car">
+    <meta property="twitter:image" content="{{asset('/storage/logo.png') }}">
+@endsection
+
 @section ("content")
+    <div class="section header"
+         style="background-image: url({{ asset('/storage/header-image.png') }}); background-repeat: no-repeat; background-size: cover; height: 400px">
+        <div class="container">
+            <div class="column full">
+                <div class="heading">
+                    <h1>Search for a car</h1>
+                    <span class="intro">Take a look and maybe find your new car</span>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="section filter" style="">
         <div class="container">
             <div class="heading">
@@ -14,7 +64,8 @@
                             <select title="select" name="category">
                                 @foreach($brands as $brand)
 
-                                    <option @if($cat == $brand->brand_name) selected @endif value="{{ $brand->brand_name }}">
+                                    <option @if($cat == $brand->brand_name) selected
+                                            @endif value="{{ $brand->brand_name }}">
                                         {{ $brand->brand_name }}
                                     </option>
 

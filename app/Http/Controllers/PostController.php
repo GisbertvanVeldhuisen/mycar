@@ -82,6 +82,18 @@ class PostController extends Controller
         ]);
     }
 
+    function singlePageAppBlade($post_id)
+    {
+
+        $posts = Post::findOrFail($post_id);
+
+        return view('/includes/app', [
+
+            'posts' => $posts,
+
+        ]);
+    }
+
     public function deletePost(Request $request)
     {
         Post::destroy($request->get('post_id'));

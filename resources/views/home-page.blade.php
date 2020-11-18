@@ -1,4 +1,39 @@
 @extends ('layouts/app')
+@section('meta')
+    <meta name="title" content="{{$homeinfo->title}}">
+    <meta name="description" content="{{$homeinfo->post_intro}}">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://{{$homeinfo->title}}.nl/">
+    <meta property="og:title" content="{{$homeinfo->title}}">
+    <meta property="og:description" content="{{$homeinfo->post_intro}}">
+    <meta property="og:image" content="{{asset('/storage/logo.png') }}">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{$homeinfo->title}}.nl/">
+    <meta property="twitter:title" content="{{$homeinfo->title}}">
+    <meta property="twitter:description" content="{{$homeinfo->post_intro}}">
+    <meta property="twitter:image" content="{{asset('/storage/logo.png') }}">
+
+    <meta name="title" content="{{$homeinfo->title}}">
+    <meta name="description" content="{{$homeinfo->post_intro}}">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://{{$homeinfo->title}}.nl/">
+    <meta property="og:title" content="{{$homeinfo->title}}">
+    <meta property="og:description" content="{{$homeinfo->post_intro}}">
+    <meta property="og:image" content="{{asset('/storage/logo.png') }}">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://{{$homeinfo->title}}.nl/">
+    <meta property="twitter:title" content="{{$homeinfo->title}}">
+    <meta property="twitter:description" content="{{$homeinfo->post_intro}}">
+    <meta property="twitter:image" content="{{asset('/storage/logo.png') }}">
+@endsection
 
 @section ("content")
     <div class="section header"
@@ -12,10 +47,10 @@
                         @endif
                     </h1>
                     <span class="intro">
-                        @if(!empty($homeinfo->intro_text))
+                    @if(!empty($homeinfo->intro_text))
                             {{$homeinfo->intro_text}}
                         @endif
-                    </span>
+                </span>
                 </div>
             </div>
         </div>

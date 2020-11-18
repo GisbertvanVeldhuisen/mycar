@@ -55,6 +55,18 @@ Route::get('/post', [\App\Http\Controllers\PostController::class, 'getPost']);
 
 Route::put('/post', [\App\Http\Controllers\PostController::class, 'deletePost']);
 
+//Comment
+Route::get('/comment', function (){
+    return view('comment');
+});
+
+Route::post('/post/{post:post_id}', [\App\Http\Controllers\CommentController::class, 'create']);
+
+Route::get('/post/{post:post_id}', [\App\Http\Controllers\CommentController::class, 'getComment']);
+
+Route::put('/post/{post:post_id}', [\App\Http\Controllers\CommentController::class, 'deleteComment']);
+
+
 //Admin check
 Route::middleware(['auth','admin'])->group(function () {
     Route::get('/home-edit', [\App\Http\Controllers\UserController::class, 'index1']);
@@ -67,8 +79,14 @@ Route::middleware(['auth','admin'])->group(function () {
 //Single page for users
 Route::get('/user/{user:name}', [\App\Http\Controllers\ProfilePageController::class, 'getUser']);
 
-Route::get('/{post:post_id}', [\App\Http\Controllers\ProfilePageController::class, 'singlePageContent'])->name('single-page');
+Route::get('/post/{post:post_id}', [\App\Http\Controllers\ProfilePageController::class, 'singlePageContent'])->name('single-page');
 
 //Single page for post (moet onderaan in web.php)
+
+
 Route::get('/{post:post_id}', [\App\Http\Controllers\PostController::class, 'singlePageContent'])->name('single-page');
 Route::delete('/{post:post_id}', [\App\Http\Controllers\PostController::class, 'deletePost'])->name('delete-post');
+
+Route::get('/post/{post:post_id}', [\App\Http\Controllers\PostController::class, 'singlePageContent'])->name('single-page');
+
+

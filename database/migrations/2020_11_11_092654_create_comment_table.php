@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateReactionTable extends Migration
+class CreateCommentTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,15 @@ class CreateReactionTable extends Migration
      */
     public function up()
     {
-        Schema::create('reaction', function (Blueprint $table) {
-            $table->integer('reaction_id');
-            $table->timestamp('reaction_date')->nullable();
+        Schema::create('comment', function (Blueprint $table) {
+            $table->id('comment_id');
+            $table->integer('comment_reported')->default(0);
+            $table->integer('user_id');
+            $table->text('comment_content');
+            $table->timestamps();
+
+
+
         });
     }
 
@@ -26,6 +32,6 @@ class CreateReactionTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('reaction');
+        Schema::dropIfExists('comment');
     }
 }

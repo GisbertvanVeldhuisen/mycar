@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Post;
+use App\Models\Comment;
 use App\Models\Brand;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -73,11 +74,14 @@ class PostController extends Controller
     function singlePageContent($post_id)
     {
 
+        $comments = Comment::all();
+
         $posts = Post::findOrFail($post_id);
 
         return view('single-post', [
 
             'posts' => $posts,
+            'comments' => $comments
 
         ]);
     }
@@ -100,4 +104,6 @@ class PostController extends Controller
 
         return redirect()->back();
     }
+
+
 }

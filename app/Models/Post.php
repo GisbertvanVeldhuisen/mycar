@@ -28,6 +28,7 @@ class Post extends Model
         'car_horsepower'
     ];
 
+
     public function user()
     {
         return $this->belongsTo('App\Models\User', 'id', 'user_id');

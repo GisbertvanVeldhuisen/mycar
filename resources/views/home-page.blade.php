@@ -83,6 +83,7 @@
 
                     <div class="column one-third">
                         <div class="image-container">
+                            <a class="full-link-button" href="{{ route('single-page',  $car->post_id) }}"></a>
                             <form method="post">
                                 @csrf
                                 <input type="hidden" name="postid" value="{{ $car->post_id }}">

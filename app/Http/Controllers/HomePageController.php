@@ -13,21 +13,24 @@ class HomePageController extends Controller
     {
         Home::updateOrCreate(
             [
+                /*past alleen aan van id 1*/
                 'id' => 1
             ],
             [
+                /*vult deze tabellen*/
                 'title' => $request->get('title'),
                 'intro_text' => $request->get('intro'),
                 'text_image' => $request->get('text'),
             ]
         );
-
+        /*controleert of age png is*/
         $request->validate([
             'image-text' => ['mimes:png'],
             'logo' => ['mimes:png'],
             'header-image' => ['mimes:png'],
         ]);
 
+        /*controleert of image gevuld is anders doet hij niks.*/
         if ($request->file('image-text'))
             $request->file('image-text')->storeAs('public', 'image-text.'. $request->file('image-text')->getClientOriginalExtension());
 
@@ -44,6 +47,7 @@ class HomePageController extends Controller
 
     public function getHome()
     {
+        /*haalt alle info uit de tabel op*/
         $homeinfo = Home::find(1);
         $cars = Post::take(3)->orderBy('created_at', 'desc')->get();
 
@@ -52,6 +56,7 @@ class HomePageController extends Controller
 
     public function getFormInfo()
     {
+        /*Haalt alle info op voor het formulier*/
         $forminfo = Home::find(1);
         return view('home-page-edit', ['forminfo' => $forminfo]);
     }

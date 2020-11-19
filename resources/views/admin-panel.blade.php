@@ -27,12 +27,6 @@
                                 >{{ $user->email }}</p>
 
                             <div class="button-row">
-                                <div class="button-wrap">
-                                    <a class="button ghost" href="#">
-                                        <span class="button-title">ban</span>
-                                    </a>
-                                </div>
-
                                 <form action="" method="post">
                                     @csrf
                                     <input type="hidden" name="id" value="{{ $user->id }}">
@@ -69,17 +63,19 @@
                     @foreach($report as $car)
                         <div class="column one-third">
                             <div class="image-container">
-                                <img src="https://picsum.photos/400/400" alt="">
+                                <a class="full-link-button" href="{{ route('single-page',  $car->post_id) }}"></a>
+                                <form action="" method="post">
+                                    @csrf
+                                    <input type="hidden" name="post_id" value="{{ $car->post_id }}">
+                                    <div class="button-wrap">
+                                        <button class="button background-red" type="submit">Delete</button>
+                                    </div>
+                                </form>
+                                <img src="{{asset('/storage/'.$car->post_id.'image-left-text.png') }}" alt="">
                                 <div class="owner">Owner</div>
                                 <div class="brand">{{ $car->car_brand }}</div>
                                 <div class="button-wrap">
-                                    <form action="" method="post">
-                                        @csrf
-                                        <input type="hidden" name="post_id" value="{{ $car->post_id }}">
-                                        <div class="button-wrap">
-                                            <button class="button background-tertairy" type="submit">Delete</button>
-                                        </div>
-                                    </form>
+
                                 </div>
                             </div>
                         </div>

@@ -2,6 +2,7 @@
 
 
 @section ("content")
+    {{--admin keuze pagina--}}
     <div class="section header"
          style="background-image: url({{ asset('/storage/header-image.png') }}); background-repeat: no-repeat; background-size: cover; height: 400px">
         <div class="container">

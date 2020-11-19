@@ -37,60 +37,60 @@ html #root .image-container {
   flex-wrap: wrap;
 }
 
-html #root .button-wrap .button {
+html #root .button {
   text-decoration: none;
   padding: 10px 15px;
 }
 
-html #root .button-wrap .button .button-title {
+html #root .button .button-title {
   font-weight: 600;
   font-size: 16px;
 }
 
-html #root .button-wrap .button.background-secondary {
+html #root .button.background-secondary {
   background-color: #0072ce;
 }
 
-html #root .button-wrap .button.background-secondary .button-title {
+html #root .button.background-secondary .button-title {
   color: white;
 }
 
-html #root .button-wrap .button.background-gray {
+html #root .button.background-gray {
   background-color: #363636;
 }
 
-html #root .button-wrap .button.background-gray .button-title {
+html #root .button.background-gray .button-title {
   color: white;
 }
 
-html #root .button-wrap .button.background-tertairy {
+html #root .button.background-tertairy {
   background-color: #003791;
 }
 
-html #root .button-wrap .button.background-tertairy .button-title {
+html #root .button.background-tertairy .button-title {
   color: white;
 }
 
-html #root .button-wrap .button.ghost .button-title {
+html #root .button.ghost .button-title {
   border-bottom: 2px solid #363636;
 }
 
-html #root .button-wrap .button.background-red {
+html #root .button.background-red {
   background-color: red;
   color: white;
   border: none;
 }
 
-html #root .button-wrap .button.background-red .button-title {
+html #root .button.background-red .button-title {
   color: white;
   border-bottom: 2px solid white;
 }
 
-html #root .button-wrap .button.borderd {
+html #root .button.borderd {
   border: 1px solid #363636;
 }
 
-html #root .button-wrap .button .button-title {
+html #root .button .button-title {
   text-decoration: none;
   color: black;
 }
@@ -190,6 +190,13 @@ html #root .menu-item {
 html #root .menu-item.button {
   color: white;
   padding: 10px 15px;
+}
+
+html #root .menu-item.button.background-primary {
+  background: #003791;
+}
+
+html #root .menu-item.button.background-tertairy {
   background: #363636;
 }
 

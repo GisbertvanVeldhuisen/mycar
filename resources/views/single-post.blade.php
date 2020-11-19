@@ -1,6 +1,41 @@
 @extends ('layouts/app')
+@section('meta')
+    <meta name="title" content="@if(isset($posts->post_title)){{$posts->post_title}}@else{{$homeinfo->title}}@endif">
+    <meta name="description" content="@if(isset($posts->post_intro)){{$posts->post_intro}}@else{{$homeinfo->intro_text}}@endif">
 
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://@if(isset($posts->post_title)){{$posts->post_title}}@else{{$homeinfo->title}}@endif.nl/">
+    <meta property="og:title" content="@if(isset($posts->post_title)){{$posts->post_title}}@else{{$homeinfo->title}}@endif">
+    <meta property="og:description" content="@if(isset($posts->post_intro)){{$posts->post_intro}}@else{{$homeinfo->intro_text}}@endif">
+    <meta property="og:image" content="{{asset('/storage/'.$posts->post_id.'image-left-text.png') }}">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://@if(isset($posts->post_title)){{$posts->post_title}}@else{{$homeinfo->title}}@endif.nl/">
+    <meta property="twitter:title" content="@if(isset($posts->post_title)){{$posts->post_title}}@else{{$homeinfo->title}}@endif">
+    <meta property="twitter:description" content="@if(isset($posts->post_intro)){{$posts->post_intro}}@else{{$homeinfo->intro_text}}@endif">
+    <meta property="twitter:image" content="{{asset('/storage/'.$posts->post_id.'image-left-text.png') }}">
+
+    <meta name="title" content="@if(isset($posts->post_title)){{$posts->post_title}}@else{{$homeinfo->title}}@endif">
+    <meta name="description" content="@if(isset($posts->post_intro)){{$posts->post_intro}}@else{{$homeinfo->intro_text}}@endif">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://@if(isset($posts->post_title)){{$posts->post_title}}@else{{$homeinfo->title}}@endif.nl/">
+    <meta property="og:title" content="@if(isset($posts->post_title)){{$posts->post_title}}@else{{$homeinfo->title}}@endif">
+    <meta property="og:description" content="@if(isset($posts->post_intro)){{$posts->post_intro}}@else{{$homeinfo->intro_text}}@endif">
+    <meta property="og:image" content="{{asset('/storage/'.$posts->post_id.'image-left-text.png') }}">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://@if(isset($posts->post_title)){{$posts->post_title}}@else{{$homeinfo->title}}@endif.nl/">
+    <meta property="twitter:title" content="@if(isset($posts->post_title)){{$posts->post_title}}@else{{$homeinfo->title}}@endif">
+    <meta property="twitter:description" content="@if(isset($posts->post_intro)){{$posts->post_intro}}@else{{$homeinfo->intro_text}}@endif">
+    <meta property="twitter:image" content="{{asset('/storage/'.$posts->post_id.'image-left-text.png') }}">
+@endsection
 @section ("content")
+    {{--single post--}}
     <div class="section header"
          style="background-image: url(https://picsum.photos/400/400); background-repeat: no-repeat; background-size: cover; height: 400px">
         <div class="container">

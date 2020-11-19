@@ -1,6 +1,42 @@
 @extends ('layouts/app')
+@section('meta')
+    <meta name="title" content="{{$homeinfo->title}}">
+    <meta name="description" content="{{$homeinfo->post_intro}}">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://{{$homeinfo->title}}.nl/">
+    <meta property="og:title" content="{{$homeinfo->title}}">
+    <meta property="og:description" content="{{$homeinfo->post_intro}}">
+    <meta property="og:image" content="{{asset('/storage/logo.png') }}">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{$homeinfo->title}}.nl/">
+    <meta property="twitter:title" content="{{$homeinfo->title}}">
+    <meta property="twitter:description" content="{{$homeinfo->post_intro}}">
+    <meta property="twitter:image" content="{{asset('/storage/logo.png') }}">
+
+    <meta name="title" content="{{$homeinfo->title}}">
+    <meta name="description" content="{{$homeinfo->post_intro}}">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://{{$homeinfo->title}}.nl/">
+    <meta property="og:title" content="{{$homeinfo->title}}">
+    <meta property="og:description" content="{{$homeinfo->post_intro}}">
+    <meta property="og:image" content="{{asset('/storage/logo.png') }}">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://{{$homeinfo->title}}.nl/">
+    <meta property="twitter:title" content="{{$homeinfo->title}}">
+    <meta property="twitter:description" content="{{$homeinfo->post_intro}}">
+    <meta property="twitter:image" content="{{asset('/storage/logo.png') }}">
+@endsection
 
 @section ("content")
+    {{--homepagina--}}
     <div class="section header"
          style="background-image: url({{ asset('/storage/header-image.png') }}); background-repeat: no-repeat; background-size: cover; height: 400px">
         <div class="container">
@@ -12,10 +48,10 @@
                         @endif
                     </h1>
                     <span class="intro">
-                        @if(!empty($homeinfo->intro_text))
+                    @if(!empty($homeinfo->intro_text))
                             {{$homeinfo->intro_text}}
                         @endif
-                    </span>
+                </span>
                 </div>
             </div>
         </div>
@@ -47,6 +83,7 @@
 
                     <div class="column one-third">
                         <div class="image-container">
+                            <a class="full-link-button" href="{{ route('single-page',  $car->post_id) }}"></a>
                             <form method="post">
                                 @csrf
                                 <input type="hidden" name="postid" value="{{ $car->post_id }}">

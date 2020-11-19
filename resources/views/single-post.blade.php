@@ -60,18 +60,26 @@
                 <p class="reaction">{{$comment->comment_content}}</p>
                 <p class="username">{{ $comment->user->name }}</p>
                 <span style="color:white">{{$comment->created_at->diffForHumans()}}</span>
+
+
             </div>
 
+
+
                 {{--                Delete--}}
-                <form action="" method="post" class="delete">
+                <form action="{{route('delete-comment', $comment->comment_id) }}" method="post">
                     @csrf
-                    <input type="hidden" name="_method" value="PUT">
+                    @if($comment->user_id == Auth::id())
+                    <input type="hidden" name="_method" value="DELETE">
                     <input type="hidden" name="comment_id" value="{{ $comment->comment_id }}">
-                    <div class="button background-red">
+                    <div class="button-wrap">
                         <button class="button background-red" type="submit">Delete</button>
                     </div>
-                    <br>
-                </form>
+
+                @else
+
+            @endif
+            </form>
 
             @endforeach
 

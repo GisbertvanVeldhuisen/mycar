@@ -12,15 +12,13 @@ use phpDocumentor\Reflection\DocBlock\Tags\Reference\Reference;
 
 class CommentController extends Controller
 {
+
+
+//    Maakt comments aan
     public function create(Request $request)
     {
-//        $comment = new Comment();
-//
-//        $comment->comment_content = $request->post('comment_content');
-//
-//        $comment->save();
 
-        Comment::create([
+        $comment = Comment::create([
             'comment_content' => $request->post('comment_content'),
             'user_id' => Auth::id(),
         ]);
@@ -28,6 +26,8 @@ class CommentController extends Controller
         return redirect()->back();
     }
 
+
+//    Haalt comment op uit de database
     public function getComment(){
 
         $comments = Comment::all();
@@ -39,39 +39,7 @@ class CommentController extends Controller
         ]);
     }
 
-    public function commentOnPost(){
-
-        $comments = Comment::all();
-
-        return view('single-post', [
-
-            'comments' => $comments,
-
-        ]);
-    }
-
-    public function singlePage($comment_id){
-
-        $comments = Comment::findOrFail($comment_id);
-
-        return view('single-comment', [
-
-            'comment' => $comments,
-
-        ]);
-    }
-
-    public function singlePageContent($comment_id){
-
-        $comments = Comment::findOrFail($comment_id);
-
-        return view('single-comment', [
-
-            'comments' => $comments,
-
-        ]);
-    }
-
+//    Delete comments uit database
     public function deleteComment(Request $request)
     {
         Comment::destroy($request->get('comment_id'));

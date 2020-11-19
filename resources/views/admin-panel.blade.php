@@ -2,6 +2,7 @@
 
 
 @section ("content")
+    {{--admin pagina--}}
     <div class="section users" style="">
         <div class="container">
             <div class="heading">

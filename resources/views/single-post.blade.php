@@ -35,6 +35,7 @@
     <meta property="twitter:image" content="{{asset('/storage/'.$posts->post_id.'image-left-text.png') }}">
 @endsection
 @section ("content")
+    {{--single post--}}
     <div class="section header"
          style="background-image: url(https://picsum.photos/400/400); background-repeat: no-repeat; background-size: cover; height: 400px">
         <div class="container">

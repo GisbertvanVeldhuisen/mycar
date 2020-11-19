@@ -5,31 +5,42 @@ html #root {
       min-width: inherit;
       width: 100%;
       margin: 10px 0;
-      background: $tertairy;
       border-radius: 3px;
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
-      &:nth-child(3) {
+      &.comment {
         padding: 25px;
-      }
-      .reaction{
-        font-size: 16px;
-        font-weight: 500;
-        color: white;
+        background: $tertairy;
+        form{
+          margin: 0 0 0 auto;
+        }
+        .user {
+          justify-content: space-between;
+        }
       }
 
-      .username{
+      .reaction {
+        font-size: 18px;
+        font-weight: 500;
+        color: white;
+        display: inline-block;
+      }
+
+      .time {
         font-size: 16px;
+        color: white;
+      }
+      .username {
+        font-size: 18px;
         font-weight: 600;
         color: white;
+        margin: 0 10px 0 0;
       }
       textarea {
         background: $secondary;
         min-width: 100%;
         max-width: 100%;
-        color: white!important;
-
+        color: white !important;
 
       }
     }

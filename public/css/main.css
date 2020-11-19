@@ -449,7 +449,7 @@ html #root .posts .one-third .owner {
   font-weight: 600;
   bottom: 60px;
   left: 40px;
-  color: white;
+  color: black;
   opacity: 0;
   transition: 0.4s ease;
 }
@@ -459,7 +459,7 @@ html #root .posts .one-third .brand {
   position: absolute;
   right: 40px;
   bottom: 60px;
-  color: white;
+  color: black;
   font-size: 20px;
   font-weight: 600;
   opacity: 0;
@@ -536,27 +536,41 @@ html #root .reactions .full {
   min-width: inherit;
   width: 100%;
   margin: 10px 0;
-  background: #003791;
   border-radius: 3px;
   display: flex;
   flex-wrap: wrap;
+}
+
+html #root .reactions .full.comment {
+  padding: 25px;
+  background: #003791;
+}
+
+html #root .reactions .full.comment form {
+  margin: 0 0 0 auto;
+}
+
+html #root .reactions .full.comment .user {
   justify-content: space-between;
 }
 
-html #root .reactions .full:nth-child(3) {
-  padding: 25px;
+html #root .reactions .full .reaction {
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+  display: inline-block;
 }
 
-html #root .reactions .full .reaction {
+html #root .reactions .full .time {
   font-size: 16px;
-  font-weight: 500;
   color: white;
 }
 
 html #root .reactions .full .username {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
   color: white;
+  margin: 0 10px 0 0;
 }
 
 html #root .reactions .full textarea {

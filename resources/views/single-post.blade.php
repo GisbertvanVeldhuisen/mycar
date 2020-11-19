@@ -1,37 +1,51 @@
 @extends ('layouts/app')
 @section('meta')
     <meta name="title" content="@if(isset($posts->post_title)){{$posts->post_title}}@else{{$homeinfo->title}}@endif">
-    <meta name="description" content="@if(isset($posts->post_intro)){{$posts->post_intro}}@else{{$homeinfo->intro_text}}@endif">
+    <meta name="description"
+          content="@if(isset($posts->post_intro)){{$posts->post_intro}}@else{{$homeinfo->intro_text}}@endif">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://@if(isset($posts->post_title)){{$posts->post_title}}@else{{$homeinfo->title}}@endif.nl/">
-    <meta property="og:title" content="@if(isset($posts->post_title)){{$posts->post_title}}@else{{$homeinfo->title}}@endif">
-    <meta property="og:description" content="@if(isset($posts->post_intro)){{$posts->post_intro}}@else{{$homeinfo->intro_text}}@endif">
+    <meta property="og:url"
+          content="https://@if(isset($posts->post_title)){{$posts->post_title}}@else{{$homeinfo->title}}@endif.nl/">
+    <meta property="og:title"
+          content="@if(isset($posts->post_title)){{$posts->post_title}}@else{{$homeinfo->title}}@endif">
+    <meta property="og:description"
+          content="@if(isset($posts->post_intro)){{$posts->post_intro}}@else{{$homeinfo->intro_text}}@endif">
     <meta property="og:image" content="{{asset('/storage/'.$posts->post_id.'image-left-text.png') }}">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://@if(isset($posts->post_title)){{$posts->post_title}}@else{{$homeinfo->title}}@endif.nl/">
-    <meta property="twitter:title" content="@if(isset($posts->post_title)){{$posts->post_title}}@else{{$homeinfo->title}}@endif">
-    <meta property="twitter:description" content="@if(isset($posts->post_intro)){{$posts->post_intro}}@else{{$homeinfo->intro_text}}@endif">
+    <meta property="twitter:url"
+          content="https://@if(isset($posts->post_title)){{$posts->post_title}}@else{{$homeinfo->title}}@endif.nl/">
+    <meta property="twitter:title"
+          content="@if(isset($posts->post_title)){{$posts->post_title}}@else{{$homeinfo->title}}@endif">
+    <meta property="twitter:description"
+          content="@if(isset($posts->post_intro)){{$posts->post_intro}}@else{{$homeinfo->intro_text}}@endif">
     <meta property="twitter:image" content="{{asset('/storage/'.$posts->post_id.'image-left-text.png') }}">
 
     <meta name="title" content="@if(isset($posts->post_title)){{$posts->post_title}}@else{{$homeinfo->title}}@endif">
-    <meta name="description" content="@if(isset($posts->post_intro)){{$posts->post_intro}}@else{{$homeinfo->intro_text}}@endif">
+    <meta name="description"
+          content="@if(isset($posts->post_intro)){{$posts->post_intro}}@else{{$homeinfo->intro_text}}@endif">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://@if(isset($posts->post_title)){{$posts->post_title}}@else{{$homeinfo->title}}@endif.nl/">
-    <meta property="og:title" content="@if(isset($posts->post_title)){{$posts->post_title}}@else{{$homeinfo->title}}@endif">
-    <meta property="og:description" content="@if(isset($posts->post_intro)){{$posts->post_intro}}@else{{$homeinfo->intro_text}}@endif">
+    <meta property="og:url"
+          content="https://@if(isset($posts->post_title)){{$posts->post_title}}@else{{$homeinfo->title}}@endif.nl/">
+    <meta property="og:title"
+          content="@if(isset($posts->post_title)){{$posts->post_title}}@else{{$homeinfo->title}}@endif">
+    <meta property="og:description"
+          content="@if(isset($posts->post_intro)){{$posts->post_intro}}@else{{$homeinfo->intro_text}}@endif">
     <meta property="og:image" content="{{asset('/storage/'.$posts->post_id.'image-left-text.png') }}">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://@if(isset($posts->post_title)){{$posts->post_title}}@else{{$homeinfo->title}}@endif.nl/">
-    <meta property="twitter:title" content="@if(isset($posts->post_title)){{$posts->post_title}}@else{{$homeinfo->title}}@endif">
-    <meta property="twitter:description" content="@if(isset($posts->post_intro)){{$posts->post_intro}}@else{{$homeinfo->intro_text}}@endif">
+    <meta property="twitter:url"
+          content="https://@if(isset($posts->post_title)){{$posts->post_title}}@else{{$homeinfo->title}}@endif.nl/">
+    <meta property="twitter:title"
+          content="@if(isset($posts->post_title)){{$posts->post_title}}@else{{$homeinfo->title}}@endif">
+    <meta property="twitter:description"
+          content="@if(isset($posts->post_intro)){{$posts->post_intro}}@else{{$homeinfo->intro_text}}@endif">
     <meta property="twitter:image" content="{{asset('/storage/'.$posts->post_id.'image-left-text.png') }}">
 @endsection
 @section ("content")
@@ -83,35 +97,39 @@
                 @csrf
 
 
-                <textarea placeholder="Laat hier een reactie achter..." name="comment_content" class="new-reaction"></textarea>
+                <textarea placeholder="Laat hier een reactie achter..." name="comment_content"
+                          class="new-reaction"></textarea>
 
-            <input type="submit">
+                <input type="submit">
             </form>
 
 
-        @foreach($comments as $comment)
+            @foreach($comments as $comment)
 
-            <div class="column full">
-                <p class="reaction">{{$comment->comment_content}}</p>
-                <p class="username">{{ $comment->user->name }}</p>
-                <span style="color:white">{{$comment->created_at->diffForHumans()}}</span>
-            </div>
+                <div class="column full comment">
+                    <div class="column full user">
+                        <p class="username">Username: {{ $comment->user->name }}</p>
+                        <span class="time">{{$comment->created_at->diffForHumans()}}</span>
+                    </div>
+                    <div class="column full">
+                        <p class="username">{{$comment->user->name}} said:</p>
+                        <p class="reaction">{{$comment->comment_content}}</p>
+                        <form action="" method="post" class="delete">
+                            @csrf
+                            <input type="hidden" name="_method" value="PUT">
+                            <input type="hidden" name="comment_id" value="{{ $comment->comment_id }}">
+                            <button class="button background-red" type="submit">Delete</button>
+                        </form>
+                    </div>
+                </div>
 
                 {{--                Delete--}}
-                <form action="" method="post" class="delete">
-                    @csrf
-                    <input type="hidden" name="_method" value="PUT">
-                    <input type="hidden" name="comment_id" value="{{ $comment->comment_id }}">
-                    <div class="button background-red">
-                        <button class="button background-red" type="submit">Delete</button>
-                    </div>
-                    <br>
-                </form>
+
 
             @endforeach
 
 
         </div>
     </div>
-    </div>
+
 @endsection

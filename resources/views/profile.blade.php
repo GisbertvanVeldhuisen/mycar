@@ -48,21 +48,12 @@
                         <h1>{{$post->user_name}}</h1>
 
                         <span class="intro">take a look at {{$post->user_name}} his posts</span>
+                    @endforeach
                 </div>
-                @endforeach
             </div>
         </div>
     </div>
-    @if($post->user_id == Auth::id())
-        <div class="section create post">
-            <div class="container">
-                <div class="button-wrap"><a href="{{url('/post')}}" class="button background-tertairy">
-                        <span class="button-title">Create a post</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    @endif
+
     <div class="section results car-overview">
         <div class="container">
 
@@ -71,6 +62,7 @@
             </div>
             <div class="grid-container">
                 @foreach($posts as $post)
+
                     <div class="column one-third">
                         <a class="full-link-button" href="{{ route('single-page',  $post->post_id) }}"></a>
                         <div class="image-container">

@@ -20,11 +20,11 @@
                                href="{{ route('register') }}">{{ __('Register') }}</a>
                         @endif
                     @else
-
                         <a id="navbarDropdown" class="menu-item nav-link dropdown-toggle" href="user/{{Auth::user()->name}}" role="button"
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                             {{ Auth::user()->name }}
                         </a>
+                        <a class="menu-item button background-secondary" href="{{ url('/post') }}">Create a post</a>
 
                         <div class="dropdown-menu background-tertairy dropdown-menu-right"
                              aria-labelledby="navbarDropdown">

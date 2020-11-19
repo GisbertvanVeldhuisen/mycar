@@ -27,12 +27,12 @@
         <div class="main-menu-container">
             <a class="menu-item" href="{{ url('/car') }}">Cars</a>
 
+
             @auth
                 @if(Auth::user()->admin == 1)
                     <a class="menu-item" href="{{ url('/admin') }}">Admin</a>
                 @endif
             @endauth
-
             @guest
                 <a class="menu-item button background-gray" href="{{ route('login') }}">{{ __('Login') }}</a>
                 @if (Route::has('register'))
@@ -43,7 +43,7 @@
                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                     {{ Auth::user()->name }}
                 </a>
-
+                <a class="menu-item button background-primary" href="{{ url('/post') }}">Create a post</a>
                 <div class="dropdown-menu background-tertairy dropdown-menu-right" aria-labelledby="navbarDropdown">
                     <a class="menu-item dropdown-item" href="{{ route('logout') }}"
                        onclick="event.preventDefault();
@@ -56,6 +56,8 @@
                     </form>
                 </div>
             @endguest
+
+
         </div>
         <div class="logo-container">
             <img src="{{ asset('/storage/logo.png') }}">

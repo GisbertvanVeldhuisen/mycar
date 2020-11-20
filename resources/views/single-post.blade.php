@@ -114,17 +114,17 @@
                     <div class="column full">
                         <p class="username">{{$comment->user->name}} said:</p>
                         <p class="reaction">{{$comment->comment_content}}</p>
-                        <form action="" method="post" class="delete">
+                        <form action="{{route('delete-comment', $comment->comment_id)}}" method="post">
                             @csrf
-                            <input type="hidden" name="_method" value="PUT">
-                            <input type="hidden" name="comment_id" value="{{ $comment->comment_id }}">
-                            <button class="button background-red" type="submit">Delete</button>
+                            @if($comment->user_id == Auth::id())
+                                <input type="hidden" name="_method" value="DELETE">
+                                <input type="hidden" name="comment_id" value="{{ $comment->comment_id }}">
+                                <button class="button background-red" type="submit">Delete</button>
+                            @else
+                            @endif
                         </form>
                     </div>
                 </div>
-
-                {{--                Delete--}}
-
 
             @endforeach
 

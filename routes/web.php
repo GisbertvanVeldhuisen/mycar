@@ -64,7 +64,7 @@ Route::post('/post/{post:post_id}', [\App\Http\Controllers\CommentController::cl
 
 Route::get('/post/{post:post_id}', [\App\Http\Controllers\CommentController::class, 'getComment']);
 
-Route::put('/post/{post:post_id}', [\App\Http\Controllers\CommentController::class, 'deleteComment']);
+Route::delete('/post/{post:post_id}', [\App\Http\Controllers\CommentController::class, 'deleteComment'])->name('delete-comment');
 
 
 //Admin check

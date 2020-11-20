@@ -4,17 +4,19 @@ html #root {
     .full {
       min-width: inherit;
       width: 100%;
-      margin: 10px 0;
+
       border-radius: 3px;
       display: flex;
       flex-wrap: wrap;
       &.comment {
         padding: 25px;
+        margin: 10px 0;
         background: $tertairy;
         form{
           margin: 0 0 0 auto;
         }
         .user {
+          margin-bottom: 10px;
           justify-content: space-between;
         }
       }

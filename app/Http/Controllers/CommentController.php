@@ -14,13 +14,8 @@ class CommentController extends Controller
 {
     public function create(Request $request)
     {
-//        $comment = new Comment();
-//
-//        $comment->comment_content = $request->post('comment_content');
-//
-//        $comment->save();
 
-        Comment::create([
+        $comment = Comment::create([
             'comment_content' => $request->post('comment_content'),
             'user_id' => Auth::id(),
         ]);
@@ -28,44 +23,12 @@ class CommentController extends Controller
         return redirect()->back();
     }
 
-    public function getComment(){
+    public function getComment()
+    {
 
         $comments = Comment::all();
 
         return view('comment', [
-
-            'comments' => $comments,
-
-        ]);
-    }
-
-    public function commentOnPost(){
-
-        $comments = Comment::all();
-
-        return view('single-post', [
-
-            'comments' => $comments,
-
-        ]);
-    }
-
-    public function singlePage($comment_id){
-
-        $comments = Comment::findOrFail($comment_id);
-
-        return view('single-comment', [
-
-            'comment' => $comments,
-
-        ]);
-    }
-
-    public function singlePageContent($comment_id){
-
-        $comments = Comment::findOrFail($comment_id);
-
-        return view('single-comment', [
 
             'comments' => $comments,
 
@@ -78,9 +41,6 @@ class CommentController extends Controller
 
         return redirect()->back();
     }
-
-
-
 
 
 }

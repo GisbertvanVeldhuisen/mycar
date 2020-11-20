@@ -101,7 +101,7 @@
                             <img src="{{asset('/storage/'.$car->post_id.'image-left-text.png') }}" alt="">
                             <div class="owner">{{ $car->user_name }}</div>
                             <div class="brand">{{ $car->car_brand }}</div>
-                            <div class="button-wrap">
+                            <div class="button-wrap like">
                                 <a class="button background-tertairy" href="#">
                                     <span class="button-title">like</span>
                                 </a>

@@ -32,6 +32,14 @@ html #root {
       flex-wrap: wrap;
     }
   }
+
+  .image{
+    max-width: 100%;
+    img{
+      max-width: 100%;
+    }
+  }
+
   .image-container {
     display: flex;
     justify-content: flex-end;

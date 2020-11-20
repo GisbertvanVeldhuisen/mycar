@@ -51,7 +51,7 @@
 @section ("content")
     {{--single post--}}
     <div class="section header"
-         style="background-image: url(https://picsum.photos/400/400); background-repeat: no-repeat; background-size: cover; height: 400px">
+         style="background-image: url({{ asset('/storage/header-image.png') }}); background-repeat: no-repeat; background-position: center; background-size: cover; height: 400px">
         <div class="container">
             <div class="column full">
                 <div class="heading">
@@ -69,7 +69,7 @@
 
             <div class="column one-half image right">
                 <div class="image">
-                    <img src="https://picsum.photos/400/400" alt="">
+                    <img src="{{asset('/storage/'.$posts->post_id.'image-right-text.png') }}" alt="">
                 </div>
             </div>
         </div>
@@ -78,7 +78,7 @@
         <div class="container">
             <div class="column one-half image left">
                 <div class="image">
-                    <img src="https://picsum.photos/400/400" alt="">
+                    <img src="{{asset('/storage/'.$posts->post_id.'image-left-text.png') }}" alt="">
                 </div>
             </div>
             <div class="column one-half">

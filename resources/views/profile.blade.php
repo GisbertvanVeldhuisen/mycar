@@ -43,12 +43,10 @@
          style="background-image: url({{ asset('/storage/header-image.png') }}); background-repeat: no-repeat; background-size: cover; height: 400px">
         <div class="container">
             <div class="column full">
-                <div class="heading">
-                    @foreach($posts as $post)
-                        <h1>{{$post->user_name}}</h1>
+                <div class="heading">¶
+                    <h1>{{$post->user_name}}</h1>
 
-                        <span class="intro">take a look at {{$post->user_name}} his posts</span>
-                    @endforeach
+                    <span class="intro">take a look at {{$post->user_name}} his posts</span>
                 </div>
             </div>
         </div>
@@ -85,7 +83,7 @@
                             <img src="{{asset('/storage/'.$post->post_id.'image-left-text.png') }}" alt="">
                             <div class="owner">{{$post->user_name}}</div>
                             <div class="brand">{{ $post->car_brand }}</div>
-                            <div class="button-wrap">
+                            <div class="button-wrap like">
                                 <a class="button background-tertairy" href="#">
                                     <span class="button-title">like</span>
                                 </a>

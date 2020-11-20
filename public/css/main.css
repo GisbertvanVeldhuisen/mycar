@@ -31,6 +31,14 @@ html #root .column.image.right {
   flex-wrap: wrap;
 }
 
+html #root .image {
+  max-width: 100%;
+}
+
+html #root .image img {
+  max-width: 100%;
+}
+
 html #root .image-container {
   display: flex;
   justify-content: flex-end;
@@ -449,9 +457,10 @@ html #root .posts .one-third .owner {
   font-weight: 600;
   bottom: 60px;
   left: 40px;
-  color: black;
+  color: white;
   opacity: 0;
   transition: 0.4s ease;
+  text-shadow: 2px 2px black;
 }
 
 html #root .car-overview .one-third .brand,
@@ -459,7 +468,8 @@ html #root .posts .one-third .brand {
   position: absolute;
   right: 40px;
   bottom: 60px;
-  color: black;
+  color: white;
+  text-shadow: 2px 2px black;
   font-size: 20px;
   font-weight: 600;
   opacity: 0;
@@ -474,6 +484,12 @@ html #root .posts .one-third .image-container img {
 html #root .car-overview .one-third .button-wrap,
 html #root .posts .one-third .button-wrap {
   min-width: 100%;
+}
+
+html #root .car-overview .one-third .button-wrap.like,
+html #root .posts .one-third .button-wrap.like {
+  position: absolute;
+  bottom: 0;
 }
 
 html #root .car-overview .one-third .button-wrap .button,

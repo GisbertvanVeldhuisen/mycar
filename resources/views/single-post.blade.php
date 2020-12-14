@@ -69,7 +69,7 @@
 
             <div class="column one-half image right">
                 <div class="image">
-                    <img src="{{asset('/storage/'.$posts->post_id.'image-right-text.png') }}" alt="">
+                    <img src="{{asset('/storage/'.$posts->post_id.'image-right-text.png') }}" alt="Image next to text">
                 </div>
             </div>
         </div>
@@ -78,7 +78,7 @@
         <div class="container">
             <div class="column one-half image left">
                 <div class="image">
-                    <img src="{{asset('/storage/'.$posts->post_id.'image-left-text.png') }}" alt="">
+                    <img src="{{asset('/storage/'.$posts->post_id.'image-left-text.png') }}" alt="Image next to text">
                 </div>
             </div>
             <div class="column one-half">
@@ -131,5 +131,30 @@
 
         </div>
     </div>
+{{--    <div class="section reactions" style="">
+        <div class="container">
+            <table>
+
+                <tr>
+                    <td>Brand:</td>
+                    <td>{{$posts->car_brand}}</td>
+                </tr>
+                <tr>
+                    <td>Model:</td>
+                    <td>{{$posts->car_model}}</td>
+                </tr>
+                <tr>
+                    <td>Buildyear:</td>
+                    <td>{{$posts->car_buildyear}}</td>
+                </tr>
+                <tr>
+                    <td>Mileage:</td>
+                    <td>{{$posts->car_mileage}}</td>
+                </tr>
+                <tr>{{$posts->car_color}}</tr>
+                <tr>{{$posts->car_horsepower}}</tr>
+            </table>
+        </div>
+    </div>--}}
 
 @endsection

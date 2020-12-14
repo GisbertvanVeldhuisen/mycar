@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 
 class HomePageController extends Controller
 {
+    //dit maakt home info aan//
     public function updateOrCreate(Request $request)
     {
         Home::updateOrCreate(

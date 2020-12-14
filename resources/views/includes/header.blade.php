@@ -3,7 +3,7 @@
         <div class="menu-container">
             <div class="menu-container">
                 <div class="logo-container">
-                    <a href="{{ url('/') }}"><img src="{{ asset('/storage/logo.png') }}"></a>
+                    <a href="{{ url('/') }}"><img src="{{ asset('/storage/logo.png') }}" alt=""></a>
                 </div>
                 <div class="main-menu-container">
                     <a class="menu-item" href="{{ url('/car') }}">Cars</a>

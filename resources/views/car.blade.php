@@ -42,7 +42,7 @@
 @section ("content")
     {{--Alle autos overzicht--}}
     <div class="section header"
-         style="background-image: url({{ asset('/storage/header-image.png') }}); background-repeat: no-repeat; background-size: cover; height: 400px">
+         style="background-image: url({{ asset('/storage/header-image.png') }}); background-position: center; background-repeat: no-repeat; background-size: cover; height: 400px">
         <div class="container">
             <div class="column full">
                 <div class="heading">
@@ -98,7 +98,7 @@
                                     <button class="button background-red" type="submit">Report</button>
                                 </div>
                             </form>
-                            <img src="{{asset('/storage/'.$car->post_id.'image-left-text.png') }}" alt="">
+                            <img src="{{asset('/storage/'.$car->post_id.'image-left-text.png') }}" alt="Image from post">
                             <div class="owner">{{ $car->user_name }}</div>
                             <div class="brand">{{ $car->car_brand }}</div>
                             <div class="button-wrap like">

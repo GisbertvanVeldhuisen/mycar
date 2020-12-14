@@ -1,7 +1,8 @@
 @extends ('layouts/app')
 @section('meta')
+
     <meta name="title" content="{{$homeinfo->title}}">
-    <meta name="description" content="{{$homeinfo->post_intro}}">
+    <meta name="description" content="{{$homeinfo->intro_text}}">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -38,7 +39,7 @@
 @section ("content")
     {{--homepagina--}}
     <div class="section header"
-         style="background-image: url({{ asset('/storage/header-image.png') }}); background-repeat: no-repeat; background-size: cover; height: 400px">
+         style="background-image: url({{ asset('/storage/header-image.png') }}); background-repeat: no-repeat; background-position: center; background-size: cover; height: 400px">
         <div class="container">
             <div class="column full">
                 <div class="heading">
@@ -68,7 +69,7 @@
 
             <div class="column one-half image right">
                 <div class="image">
-                    <img src="{{ asset('/storage/image-text.png') }}" alt="">
+                    <img alt="Nice car" src="{{ asset('/storage/image-text.png') }}">
                 </div>
             </div>
         </div>
@@ -91,7 +92,7 @@
                                     <button class="button background-red" type="submit">Report</button>
                                 </div>
                             </form>
-                            <img src="{{asset('/storage/'.$car->post_id.'image-left-text.png') }}" alt="">
+                            <img alt="Nice car from post" src="{{asset('/storage/'.$car->post_id.'image-left-text.png') }}">
                             <div class="owner">{{ $car->user_name }}</div>
                             <div class="brand">{{ $car->car_brand }}</div>
                             <div class="button-wrap like">

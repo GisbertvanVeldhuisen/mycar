@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- Primary Meta Tags -->
 
-    <title>@yield('title')</title>
+    <title>My car</title>
 
     @yield('meta')
 

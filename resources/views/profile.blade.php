@@ -40,10 +40,10 @@
 @section ("content")
     {{--profiel pagina--}}
     <div class="section header"
-         style="background-image: url({{ asset('/storage/header-image.png') }}); background-repeat: no-repeat; background-size: cover; height: 400px">
+         style="background-image: url({{ asset('/storage/header-image.png') }}); background-repeat: no-repeat; background-position: center; background-size: cover; height: 400px">
         <div class="container">
             <div class="column full">
-                <div class="heading">¶
+                <div class="heading">
                     <h1>{{$post->user_name}}</h1>
 
                     <span class="intro">take a look at {{$post->user_name}} his posts</span>
@@ -80,7 +80,7 @@
                                     </div>
                                 @endif
                             </form>
-                            <img src="{{asset('/storage/'.$post->post_id.'image-left-text.png') }}" alt="">
+                            <img src="{{asset('/storage/'.$post->post_id.'image-left-text.png') }}" alt="Image from post">
                             <div class="owner">{{$post->user_name}}</div>
                             <div class="brand">{{ $post->car_brand }}</div>
                             <div class="button-wrap like">
